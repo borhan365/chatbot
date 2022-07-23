@@ -38,11 +38,15 @@ section {
   width: 100%;
   height: auto;
 }
-
+button {
+  border: unset;
+  outline: unset;
+}
 /* Variables */
 :root {
   --brand-color: linear-gradient(135deg, rgb(64, 29, 186), rgb(130, 91, 240)); 
-  --secondary-color: linear-gradient(115deg, rgb(42, 39, 218), rgb(0, 204, 255));
+  --secondary-bg: linear-gradient(115deg, rgb(42, 39, 218), rgb(0, 204, 255));
+  --secondary-color: #1189f0; 
   --brand-shadow: rgba(64, 29, 186, 0.5) 0px 4px 24px;
   --radius: 16px; 
   --font-color: #7269ef;
@@ -54,8 +58,15 @@ section {
   box-sizing: border-box;
   width: 100%;
   position: relative;
+  margin: 0px auto;
 }
-
+.btn {
+  padding: 4px 10px;
+  background: var(--secondary-color);
+  color: white;
+  border-radius: 20px;
+  font-family: poppins;
+}
 /* main style */
 
 /* home page */
@@ -64,8 +75,8 @@ section {
 }
 .chatbot-widget-wrapper {
   position: fixed;
-  right: 40px;
-  bottom: 20px;
+  right: 20px;
+  bottom: 10px;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -73,7 +84,7 @@ section {
 }
 /* chatbot icon */
 .chatbot-icon {
-  background: var(--secondary-color);
+  background: var(--secondary-bg);
   width: 60px;
   height: 60px;
   border-radius: 50%;
@@ -83,7 +94,8 @@ section {
   justify-content: center;
   align-items: center;
   cursor: pointer;
-
+  transition: all 0.2s ease-in;
+  overflow: hidden;
 }
 .chatbot-icon:hover .chatbot-icon svg{
   color: green;
@@ -92,17 +104,28 @@ section {
   font-size: 30px;
   color: white;
 }
+.chatbot-icon img {
+  width: 25px;
+}
 
 /* chatbot header */
 .chatbot-widget {
   background: white;
   border-radius: var(--radius);
   box-shadow: rgb(0 18 46 / 16%) 0px 8px 36px 0px;
-  height: 500px;
+  height: 480px;
   width: 372px;
   overflow: hidden;
-  scrollbar-width: thin;
+  transition: all 0.3s ease-in-out;
+  visibility: hidden;
+  opacity: 0;
 }
+.chatbot-widget.active {
+  visibility: visible;
+  opacity: 1;
+  height: 520px;
+}
+
 .chatbot-widget-header {
   display: flex;
   justify-content: space-between;
@@ -198,11 +221,11 @@ section {
 .chat-conversation-wrapper {
   padding: 0px 28px;
   width: 100%;
-  height: 357px;
+  height: 375px;
   overflow: hidden auto;
   background: rgb(255, 255, 255);
   transition: all 0.3s ease 0s;
-  max-height: 357px;
+  max-height: 375px;
   min-height: 160px;
   flex: 0 1 auto;
   scrollbar-width: thin;
@@ -235,13 +258,13 @@ ul.message-body {
   float: left;
 }
 ul.message-body li {
-  padding: 10px 15px;
+  padding: 7px 15px;
   border-radius: 20px;
   margin: 2px 0px;
   font-size: 15px;
   overflow-wrap: break-word;
   display: inline-block;
-  width: fit-content;
+  /* width: fit-content; */
   clear: both;
   position: relative;
   transition: margin 0.28s ease-in-out 0s;
@@ -249,6 +272,7 @@ ul.message-body li {
   justify-content: flex-start;
   grid-gap: 5px;
   align-items: center;
+  margin-bottom: 5px;
 }
 ul.message-body li img {
   width: 20px;
@@ -267,6 +291,10 @@ li.message-bubble-agent {
   font-size: 15px;
   line-height: 20px;
   margin-bottom: 5px;
+}
+li.message-bubble-agent a {
+  color: var(--secondary-color);
+  font-weight: 500;
 }
 /* message visitor */
 li.message-bubble-visitor {
@@ -368,10 +396,11 @@ li.message-bubble-visitor {
   }
   .chatbot-footer-input-box input:focus {
     outline: none;
+    border: 1px solid #1189f0;
   }
   .chatbot-send-message-button {
     border: unset;
-    background: #7269ef;
+    background: var(--secondary-bg);
     color: white;
     border-radius: 30px;
     font-size: 17px;
@@ -396,21 +425,21 @@ li.message-bubble-visitor {
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
-    grid-gap: 5px;
+    column-gap: 5px;
     flex-flow: row wrap;
   }
   .message-day-slot-item {
     background: white;
-    border: 1px solid #7269ef;
+    border: 1px solid var(--secondary-color);
     padding: 4px 10px !important;
     font-size: 12px !important;
-    color: #7269ef;
-    font-weight: 400;
+    color: var(--secondary-color);
+    font-weight: 500;
     cursor: pointer;
     transition: all 0.3s ease-in-out !important;
 }
 .message-day-slot-item:hover {
-  background: var(--brand-color);
+  background: var(--secondary-color);
   color: white;
   transform: translateY(-2px);
 }
@@ -424,7 +453,7 @@ li.message-bubble-visitor {
   justify-content: flex-start;
   grid-gap: 10px;
   margin: 10px 0px;
-  width: unset !important;
+  width: 135%;
 }
 .chat-product-carousel-item {
   background: white;
@@ -434,6 +463,7 @@ li.message-bubble-visitor {
   height: fit-content;
   box-shadow: rgb(0 18 46 / 16%) 0px 8px 36px 0px;
   transition: all 0.3s ease-in-out !important;
+  min-height: 165px;
 }
 .chat-product-carousel-item:hover {
   transform: translateY(-2px);
@@ -476,6 +506,78 @@ li.message-bubble-visitor {
   grid-gap: 5px;
 }
 .chatbot-footer-options svg {
-  color: var(--font-color);
+  color: #1189f0;
   font-size: 20px;
+}
+
+/* carusaul */
+.swiper-button-next, .swiper-rtl .swiper-button-prev {
+  right: 95px;
+}
+.swiper-button-next:after, .swiper-button-prev:after {
+  font-size: 23px;
+  background: white;
+  padding: 5px;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 0px 5px 0px lightgray;
+  color: var(--font-color);
+}
+.swiper-button-next.swiper-button-disabled, .swiper-button-prev.swiper-button-disabled{
+  opacity: 0.1;
+}
+.featured-thumb {
+  width: 100%;
+  height: 100%;
+  background-color: #1189f0;
+}
+.featured-thumb img {
+  width: 100%;
+  height: 100%; 
+}
+
+/* header */
+section.header-section {
+  background: white;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  grid-gap: 10px;
+
+}
+.header-logo {
+  width: 70px;
+}
+.header-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+nav {
+
+}
+nav ul.navbar-wrappper {
+  display: flex;
+  justify-content: flex-start; 
+  align-items: center;
+  grid-gap: 10px;
+}
+
+/* Hero section */
+section.hero-section {
+
+}
+.row {
+  display: flex;
+  justify-content: space-between;
+  grid-gap: 20px;
+}
+.col-6 {
+  width: 100%;
 }

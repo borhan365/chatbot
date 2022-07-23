@@ -20,14 +20,13 @@ function MessageProduct() {
   return (
     <>
       <div className="product-carousel-wrapper">
-      </div>
       
         <Swiper 
         navigation={true} 
         spaceBetween={5}
         grabCursor={true}
         slidesPerView={2}
-        loop={true} 
+        // loop={true} 
         modules={[Navigation]} 
         className="mySwiper">
 
@@ -61,8 +60,8 @@ function MessageProduct() {
           <div className="chat-product-details">
             <a href="#">
               <h2>Salad With Chicken</h2>
-              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis </p>
             </a>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis </p>
           </div>
             <button className='chat-product-order-button'>Order Now</button>
         </div>
@@ -78,15 +77,15 @@ function MessageProduct() {
           {/* content */}
           <div className="chat-product-details">
             <a href="#">
-              <h2>Grilled Salmon With Lime Butter Sauce</h2>
-              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis </p>
+              <h2>Grille With Butter</h2>
             </a>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis </p>
           </div>
             <button className='chat-product-order-button'>Order Now</button>
         </div>
         </SwiperSlide>
         </Swiper>
-      
+        </div>
     </>
   )
 }
