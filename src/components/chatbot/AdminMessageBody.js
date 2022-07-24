@@ -1,35 +1,30 @@
-import React, { useState, useEffect } from 'react'
-import ReactAudioPlayer from 'react-audio-player'
-import { AiOutlineFullscreen } from 'react-icons/ai'
-import { BsFillChatRightTextFill, BsFillEmojiSmileFill, BsThreeDotsVertical } from 'react-icons/bs'
-import { FaTelegramPlane } from 'react-icons/fa'
-import { HiPlus } from 'react-icons/hi'
-import { IoIosArrowDown } from 'react-icons/io'
-import { MdAttachFile } from 'react-icons/md'
-import notification from '../../assets/mp3/message.mp3'
-import book from '../../images/icons/book.png'
-import bot from '../../images/icons/robot.png'
+import React, { useState } from 'react'
+import {BsFillChatRightTextFill, BsThreeDotsVertical, BsChevronDown} from 'react-icons/bs'
 import robot from "../../images/peoples/online-agent.jpg"
+import bot from '../../images/icons/robot.png'
 import logo from '../../images/wipdata-logo.png'
+import book from '../../images/icons/book.png'
+import {FaChevronDown, FaTelegramPlane} from 'react-icons/fa'
+import {IoIosArrowDown} from 'react-icons/io'
+import {HiPlus} from 'react-icons/hi'
+import {MdAttachFile} from 'react-icons/md'
+import {BsEmojiSmile, BsFillEmojiSmileFill, BsArrowsFullscreen} from 'react-icons/bs'
+import {AiOutlineFullscreen} from 'react-icons/ai'
 
 // product images
-import MessageProduct from '../../components/MessageProduct'
+import productOne from '../../images/products/res1.jpeg'
 import x from '../../images/icons/x.png'
+import happyChat from '../../images/peoples/happy-chat.jpg'
+import MessageProduct from '../../components/MessageProduct'
+import { Link } from 'react-router-dom'
 
-function Chatbot() {
-
-  let audio = new Audio("/message.mp3")
+function AdminMessageBody() {
 
   const [toggle, setToggle] = useState(false); 
   const [resize, setResize] = useState(false);
 
   const handleToggle = (e) => {
     setToggle(!toggle);
-
-    // play notification sound
-    if(!toggle) {
-      start();
-    }
   }
 
   // resize handler
@@ -37,16 +32,11 @@ function Chatbot() {
     setResize(!resize)
   }
 
-  // play massege notification
-  const start = () => {
-    audio.play()
-  }
-
   return (
     <>
-      <div className={resize ? "chatbot-widget-wrapper full-screen" : "chatbot-widget-wrapper"}>
+      <div className="chatbox-wrapper">
           {/* chatbot widget wrapper */}
-          <div className={toggle ? "chatbot-widget active" : "chatbot-widget"}>
+          <div className="chatbox">
             
             {/* chat header */}
             <div className="chatbot-widget-header">
@@ -101,12 +91,12 @@ function Chatbot() {
             </div>
 
             {/* chat conversation group body */}
-            <div className="chat-conversation-wrapper">
+            <div className="chat-conversation-wrapper chatbox-conversation">
               <ul className='message-body'>
 
                 {/* plain text bubble */}
                 <li className='message-bubble-agent'>
-                  <span>Hi, I'm Tidio Chatbot</span>
+                  <span>Hi, I'm WipData Chatbot</span>
                   <img src={bot} alt="bot" />
                 </li>
                 <div class="messageTimestamp fade-enter-done">Yesterday, 20:00</div>
@@ -162,9 +152,9 @@ function Chatbot() {
                 </li>
 
                 {/* product carousel */}
-                <li className="message-product-carousel">
+                {/* <li className="message-product-carousel">
                   <MessageProduct />
-                </li>
+                </li> */}
 
                 {/* message by agent */}
                 <li className="message-bubble-agent">
@@ -251,22 +241,9 @@ function Chatbot() {
               </div>
             </div>
           </div>
-
-          {/* chatbot open icon */}
-          {/* if resize is true the hide chatbot icon */}
-          {
-            resize ? "" : <div className='chatbot-icon' onClick={handleToggle}>
-            {toggle ? <img src={x} alt="x" /> : <BsFillChatRightTextFill />}
-          </div>
-          }
-          <ReactAudioPlayer
-            src={audio}
-            controls
-            className='audio-hidden'
-          />
       </div>
     </>
   )
 }
 
-export default Chatbot
+export default AdminMessageBody

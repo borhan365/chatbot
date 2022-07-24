@@ -18,7 +18,7 @@ function HomeScreen() {
   return (
     <>
       <Header />
-        {/* <HeroSection /> */}
+        <HeroSection />
       <Chatbot />
     </>
   )

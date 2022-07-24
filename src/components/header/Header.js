@@ -1,5 +1,6 @@
 import React from 'react'
 import logo from '../../images/wipdata-logo.png'
+import {Link} from 'react-router-dom'
 
 function Header() {
   return (
@@ -16,12 +17,16 @@ function Header() {
           {/* navbar */}
           <nav>
             <ul className='navbar-wrappper'>
-              <li className='nav-item'><a href='/' className='nav-link'>Home</a></li>
-              <li className='nav-item'><a href='/' className='nav-link'>Business intelligence</a></li>
-              <li className='nav-item'><a href='/' className='nav-link'>robotic process automation</a></li>
-              <li className='nav-item'><a href='/' className='nav-link'>AI chatbot NLP</a></li>
-              <li className='nav-item'><a href='/' className='nav-link'>Blogs</a></li>
-              <li className='nav-item'><a href='/' className='nav-link'>Contact Us</a></li>
+              <li className='nav-item'><Link to='/' className='nav-link'>Home</Link></li>
+              <li className='nav-item'><Link to='/' className='nav-link'>Business intelligence</Link></li>
+              <li className='nav-item'><Link to='/' className='nav-link'>robotic process automation</Link></li>
+
+              <li className='nav-item'><Link to='/' className='nav-link'>AI chatbot NLP</Link></li>
+
+              <li className='nav-item'>
+                <Link to='/login' className='nav-link'>Login</Link>
+              </li>
+              <li className='nav-item'><Link to='/login' className='nav-link btn'>Admin Panel</Link></li>
             </ul>
           </nav>
         </header>
