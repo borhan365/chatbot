@@ -2,7 +2,11 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import logo from '../assets/images/wipdata-logo.png'
 import {AiOutlineUser} from 'react-icons/ai'
-import peopleOne from '../assets/images/peoples/online-agent.jpg'
+import peopleOne from '../assets/images/peoples/chat-four.jpg'
+import peopleTwo from '../assets/images/peoples/chat-one.jpg'
+import peopleThree from '../assets/images/peoples/chat-two.jpg'
+import peopleFour from '../assets/images/peoples/chat-one.jpg'
+import peopleFive from '../assets/images/peoples/chat-five.jpg'
 import Chatbot from '../components/chatbot/Chatbot'
 import AdminMessageBody from '../components/chatbot/AdminMessageBody'
 import { BsArrowsMove, BsBagCheck, BsBell, BsBookmarks, BsBox, BsBrightnessHigh, BsBug, BsChatLeftQuote, BsFolder2Open } from 'react-icons/bs'
@@ -64,7 +68,7 @@ function AdminScreen() {
                 <div className='featured-chat-item'>
                   {/* thumb */}
                   <div className='featured-chat-thumb'>
-                    <img src={peopleOne} alt="chat one" />
+                    <img src={peopleTwo} alt="chat one" />
                     <div className="online-status"></div>
                   </div>
                   <p>Mike</p>
@@ -74,7 +78,7 @@ function AdminScreen() {
                 <div className='featured-chat-item'>
                   {/* thumb */}
                   <div className='featured-chat-thumb'>
-                    <img src={peopleOne} alt="chat one" />
+                    <img src={peopleThree} alt="chat one" />
                     <div className="online-status"></div>
                   </div>
                   <p>Jhon</p>
@@ -84,7 +88,7 @@ function AdminScreen() {
                 <div className='featured-chat-item'>
                   {/* thumb */}
                   <div className='featured-chat-thumb'>
-                    <img src={peopleOne} alt="chat one" />
+                    <img src={peopleFour} alt="chat one" />
                     <div className="online-status"></div>
                   </div>
                   <p>Jassica</p>
@@ -94,7 +98,7 @@ function AdminScreen() {
                 <div className='featured-chat-item'>
                   {/* thumb */}
                   <div className='featured-chat-thumb'>
-                    <img src={peopleOne} alt="chat one" />
+                    <img src={peopleFive} alt="chat one" />
                     <div className="online-status"></div>
                   </div>
                   <p>Bond</p>
