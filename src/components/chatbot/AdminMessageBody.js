@@ -1,40 +1,64 @@
 import React, { useState } from 'react'
-import {BsFillChatRightTextFill, BsThreeDotsVertical, BsChevronDown} from 'react-icons/bs'
-import robot from "../../assets/images/peoples/online-agent.jpg"
-import bot from '../../assets/images/icons/robot.png'
-import logo from '../../assets/images/wipdata-logo.png'
+import { AiOutlineUser } from 'react-icons/ai'
+import { BsCameraVideo, BsFillEmojiSmileFill, BsXLg } from 'react-icons/bs'
+import { FaTelegramPlane } from 'react-icons/fa'
+import { HiPlus } from 'react-icons/hi'
+import { MdAttachFile, MdCall, MdVideoCall } from 'react-icons/md'
 import book from '../../assets/images/icons/book.png'
-import {FaChevronDown, FaTelegramPlane} from 'react-icons/fa'
-import {IoIosArrowDown} from 'react-icons/io'
-import {HiPlus} from 'react-icons/hi'
-import {MdAttachFile} from 'react-icons/md'
-import {BsEmojiSmile, BsFillEmojiSmileFill, BsArrowsFullscreen} from 'react-icons/bs'
-import {AiOutlineFullscreen} from 'react-icons/ai'
+import bot from '../../assets/images/icons/robot.png'
+import robot from "../../assets/images/peoples/online-agent.jpg"
+import logo from '../../assets/images/wipdata-logo.png'
 
 // product images
-import productOne from '../../assets/images/products/res1.jpeg'
-import x from '../../assets/images/icons/x.png'
+import { FiMoreVertical, FiPhoneCall, FiSearch } from 'react-icons/fi'
 import happyChat from '../../assets/images/peoples/happy-chat.jpg'
-import MessageProduct from '../../components/MessageProduct'
-import { Link } from 'react-router-dom'
 
 function AdminMessageBody() {
 
-  const [toggle, setToggle] = useState(false); 
-  const [resize, setResize] = useState(false);
+  // const [toggle, setToggle] = useState(false); 
+  const [callToggle, setCallToggle] = useState(true);
+  const [whichIcon, setWhichIcon] = useState('');
 
-  const handleToggle = (e) => {
-    setToggle(!toggle);
+  // const handleToggle = () => {
+  //   setToggle(!toggle);
+  // }
+
+  // call cancle
+  const callModel = (iconName) => {
+    setCallToggle(!callToggle);
+    setWhichIcon(iconName)
   }
 
-  // resize handler
-  const handleResize = () => {
-    setResize(!resize)
-  }
+  console.log(whichIcon)
 
   return (
     <>
       <div className="chatbox-wrapper">
+
+        {/* audio call model */}
+        <div className={callToggle ? "call-model-container" : "call-model-container active"}>
+          <div className='call-model-wrapper'>
+            <div className='call-user-avatar'>
+              <img src={happyChat} alt="user on call" />
+            </div>
+            {/* user name */}
+            <div className='call-user-content'>
+              <h2>Doris Brown</h2>
+              <p>Start Audio Call</p>
+            </div>
+            {/* user actions */}
+            <div className='call-user-actions'>
+              <div className='call-user-icon' onClick={callModel}>
+                <BsXLg />
+              </div>
+              <div className='call-user-icon'>
+              {whichIcon=="audio"&&<MdCall /> || whichIcon=="video" && <MdVideoCall />}
+              {}
+              </div>
+            </div>
+          </div>
+        </div>
+
           {/* chatbot widget wrapper */}
           <div className="chatbox">
             
@@ -70,21 +94,30 @@ function AdminMessageBody() {
                     </a>
                   </div>
 
-                  <div className='chatbot-widget-header-right-options chatbox-header-right-options'>
-                    {/* options */}
-                    <div className='chatbot-widget-options'>
-                      <BsThreeDotsVertical />
+                  <div className='chatbox-header-right-options'>
+                    {/* search */}
+                    <div className='chatbox-header-icon'>
+                      <FiSearch />
                     </div>
 
-                    {/* resize */}
-                    <div className='chatbot-widget-minimize' onClick={handleResize}>
-                      <AiOutlineFullscreen />
+                    {/* audio call */}
+                    <div className='chatbox-header-icon' onClick={()=>callModel('audio')}>
+                      <FiPhoneCall />
                     </div>
 
-                    {/* minimize */}
-                    <div className="chatbot-widget-minimize" onClick={handleToggle}>
-                      <IoIosArrowDown />
+                    {/* video call */}
+                    <div className="chatbox-header-icon" onClick={()=>callModel('video')}>
+                      <BsCameraVideo />
                     </div>
+
+                    <div className='chatbox-header-icon'>
+                      <AiOutlineUser />
+                    </div>
+
+                    <div className='chatbox-header-icon'>
+                      <FiMoreVertical />
+                    </div>
+
                   </div>
                 </div>
               </div>

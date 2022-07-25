@@ -9,9 +9,10 @@ import peopleFour from '../assets/images/peoples/chat-one.jpg'
 import peopleFive from '../assets/images/peoples/chat-five.jpg'
 import Chatbot from '../components/chatbot/Chatbot'
 import AdminMessageBody from '../components/chatbot/AdminMessageBody'
-import { BsArrowsMove, BsBagCheck, BsBell, BsBookmarks, BsBox, BsBrightnessHigh, BsBug, BsChatLeftQuote, BsFolder2Open } from 'react-icons/bs'
+import { BsArrowsMove, BsBagCheck, BsBell, BsBookmarks, BsBox, BsBrightnessHigh, BsBug, BsChatLeftQuote, BsFolder2Open, BsImage, BsPlusCircle } from 'react-icons/bs'
 import {RiGroupLine} from 'react-icons/ri'
 import {BiAddToQueue} from 'react-icons/bi'
+import {FiSearch} from 'react-icons/fi'
 
 function AdminScreen() {
   return (
@@ -25,7 +26,7 @@ function AdminScreen() {
             <li><Link to='/admin'> <AiOutlineUser /> </Link></li>
             <li><Link to='/admin'> <BsChatLeftQuote className='active' /> </Link></li>
             <li><Link to='/admin'> <RiGroupLine /> </Link></li>
-            <li><Link to='/admin'> <BiAddToQueue /> </Link></li>
+            <li><Link to='/admin'> <BsPlusCircle /> </Link></li>
             <li><Link to='/admin'> <BsBookmarks /> </Link></li>
             <li><Link to='/admin'> <BsFolder2Open /> </Link></li>
           </ul>
@@ -48,6 +49,7 @@ function AdminScreen() {
               {/* search */}
               <div className='chat-body-search'>
                 <input placeholder='Search messages or users' />
+                <FiSearch />
               </div>
 
               {/* featured chats */}
@@ -130,13 +132,16 @@ function AdminScreen() {
                       <div className='recent-chat-item-content'>
                         {/* thumb */}
                         <div className='featured-chat-thumb'>
-                          <img src={peopleOne} alt="chat one" />
+                          <img src={peopleTwo} alt="chat one" />
                           <div className="online-status"></div>
                         </div>
                         {/* content */}
                         <div className='recent-chatbox-content'>
                           <h2>Patrick Hendricks</h2>
-                          <p>okay sure😄👍</p>
+                          <div className='recent-chatbox-user-chat'>
+                            <BsImage /> 
+                            <span>images</span>
+                          </div>
                         </div>
                       </div>
                       <p>02:50</p>
@@ -154,8 +159,27 @@ function AdminScreen() {
                         </div>
                         {/* content */}
                         <div className='recent-chatbox-content'>
-                          <h2>Patrick Hendricks</h2>
-                          <p>okay sure😄👍</p>
+                          <h2>Mirta George</h2>
+                          <p>Your service is awesome. </p>
+                        </div>
+                      </div>
+                      <p>02:50</p>
+                    </Link>
+                  </li>
+
+                  {/* item */}
+                  <li className='recent-chat-item active'>
+                    <Link to="/">
+                      <div className='recent-chat-item-content'>
+                        {/* thumb */}
+                        <div className='featured-chat-thumb'>
+                          <img src={peopleFour} alt="chat one" />
+                          <div className="online-status"></div>
+                        </div>
+                        {/* content */}
+                        <div className='recent-chatbox-content'>
+                          <h2>Albert Rodarte</h2>
+                          <p className='typing-in-chat'>typing <span class="animate-typing"><span class="dot ms-1"></span><span class="dot ms-1"></span><span class="dot ms-1"></span></span></p>
                         </div>
                       </div>
                       <p>02:50</p>
@@ -168,13 +192,13 @@ function AdminScreen() {
                       <div className='recent-chat-item-content'>
                         {/* thumb */}
                         <div className='featured-chat-thumb'>
-                          <img src={peopleOne} alt="chat one" />
+                          <img src={peopleThree} alt="chat one" />
                           <div className="online-status"></div>
                         </div>
                         {/* content */}
                         <div className='recent-chatbox-content'>
-                          <h2>Patrick Hendricks</h2>
-                          <p>okay sure😄👍</p>
+                          <h2>Designer</h2>
+                          <p>Please call me immidiately</p>
                         </div>
                       </div>
                       <p>02:50</p>
@@ -187,32 +211,13 @@ function AdminScreen() {
                       <div className='recent-chat-item-content'>
                         {/* thumb */}
                         <div className='featured-chat-thumb'>
-                          <img src={peopleOne} alt="chat one" />
+                          <img src={peopleFive} alt="chat one" />
                           <div className="online-status"></div>
                         </div>
                         {/* content */}
                         <div className='recent-chatbox-content'>
-                          <h2>Patrick Hendricks</h2>
-                          <p>okay sure😄👍</p>
-                        </div>
-                      </div>
-                      <p>02:50</p>
-                    </Link>
-                  </li>
-
-                  {/* item */}
-                  <li className='recent-chat-item'>
-                    <Link to="/">
-                      <div className='recent-chat-item-content'>
-                        {/* thumb */}
-                        <div className='featured-chat-thumb'>
-                          <img src={peopleOne} alt="chat one" />
-                          <div className="online-status"></div>
-                        </div>
-                        {/* content */}
-                        <div className='recent-chatbox-content'>
-                          <h2>Patrick Hendricks</h2>
-                          <p>okay sure😄👍</p>
+                          <h2>Doris Brown</h2>
+                          <p>👍</p>
                         </div>
                       </div>
                       <p>02:50</p>
