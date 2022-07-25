@@ -1,5 +1,5 @@
 import React from 'react'
-import FeaturedThumb from '../../../images/bg/hero-one.png'
+import FeaturedThumb from '../../../assets/images/bg/hero-one.png'
 
 function HeroSection() {
   return (

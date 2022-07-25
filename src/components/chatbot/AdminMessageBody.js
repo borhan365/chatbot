@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import {BsFillChatRightTextFill, BsThreeDotsVertical, BsChevronDown} from 'react-icons/bs'
-import robot from "../../images/peoples/online-agent.jpg"
-import bot from '../../images/icons/robot.png'
-import logo from '../../images/wipdata-logo.png'
-import book from '../../images/icons/book.png'
+import robot from "../../assets/images/peoples/online-agent.jpg"
+import bot from '../../assets/images/icons/robot.png'
+import logo from '../../assets/images/wipdata-logo.png'
+import book from '../../assets/images/icons/book.png'
 import {FaChevronDown, FaTelegramPlane} from 'react-icons/fa'
 import {IoIosArrowDown} from 'react-icons/io'
 import {HiPlus} from 'react-icons/hi'
@@ -12,9 +12,9 @@ import {BsEmojiSmile, BsFillEmojiSmileFill, BsArrowsFullscreen} from 'react-icon
 import {AiOutlineFullscreen} from 'react-icons/ai'
 
 // product images
-import productOne from '../../images/products/res1.jpeg'
-import x from '../../images/icons/x.png'
-import happyChat from '../../images/peoples/happy-chat.jpg'
+import productOne from '../../assets/images/products/res1.jpeg'
+import x from '../../assets/images/icons/x.png'
+import happyChat from '../../assets/images/peoples/happy-chat.jpg'
 import MessageProduct from '../../components/MessageProduct'
 import { Link } from 'react-router-dom'
 
@@ -39,7 +39,7 @@ function AdminMessageBody() {
           <div className="chatbox">
             
             {/* chat header */}
-            <div className="chatbot-widget-header">
+            <div className="chatbot-widget-header chatbox-header">
 
               {/* agent presence */}
               <div className="chatbot-widget-agent-precence">
@@ -47,7 +47,7 @@ function AdminMessageBody() {
                 {/* agent left side */}
                 <div className="chatbot-widget-header-left">
                   {/* agent avatar */}
-                  <div className="chatbot-recipient-avatar">
+                  <div className="chatbot-recipient-avatar chatbox-recipient-avatar">
                       <img src={robot} alt="agent avatar" />
                       <div className="online-status"></div>
                   </div>
@@ -70,7 +70,7 @@ function AdminMessageBody() {
                     </a>
                   </div>
 
-                  <div className='chatbot-widget-header-right-options'>
+                  <div className='chatbot-widget-header-right-options chatbox-header-right-options'>
                     {/* options */}
                     <div className='chatbot-widget-options'>
                       <BsThreeDotsVertical />
@@ -227,7 +227,7 @@ function AdminMessageBody() {
             </div>
 
             {/* chat footer */}
-            <div className="chatbot-footer">
+            <div className="chatbot-footer chatbox-footer">
               <div className="chatbot-footer-input-box">
                 <input type="text" placeholder='Start conversation...' />
                 <button className='chatbot-send-message-button'>

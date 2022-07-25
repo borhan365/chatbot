@@ -1,8 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import logo from '../images/wipdata-logo.png'
+import logo from '../assets/images/wipdata-logo.png'
 import {AiOutlineUser} from 'react-icons/ai'
-import peopleOne from '../images/peoples/online-agent.jpg'
+import peopleOne from '../assets/images/peoples/online-agent.jpg'
 import Chatbot from '../components/chatbot/Chatbot'
 import AdminMessageBody from '../components/chatbot/AdminMessageBody'
 import { BsArrowsMove, BsBagCheck, BsBell, BsBookmarks, BsBox, BsBrightnessHigh, BsBug, BsChatLeftQuote, BsFolder2Open } from 'react-icons/bs'
@@ -19,14 +19,13 @@ function AdminScreen() {
           <ul>
             <li><Link to='/'><img src={logo} alt="logo" /></Link></li>
             <li><Link to='/admin'> <AiOutlineUser /> </Link></li>
-            <li><Link to='/admin'> <BsChatLeftQuote /> </Link></li>
+            <li><Link to='/admin'> <BsChatLeftQuote className='active' /> </Link></li>
             <li><Link to='/admin'> <RiGroupLine /> </Link></li>
             <li><Link to='/admin'> <BiAddToQueue /> </Link></li>
             <li><Link to='/admin'> <BsBookmarks /> </Link></li>
             <li><Link to='/admin'> <BsFolder2Open /> </Link></li>
-            <li><Link to='/admin'> <BsArrowsMove /> </Link></li>
-            <li><Link to='/admin'> <BsBagCheck /> </Link></li>
-            <li><Link to='/admin'> <BsBell /> </Link></li>
+          </ul>
+          <ul>
             <li><Link to='/admin'> <BsBox /> </Link></li>
             <li><Link to='/admin'> <BsBrightnessHigh /> </Link></li>
             <li><Link to='/admin'> <BsBug /> </Link></li>
@@ -68,7 +67,7 @@ function AdminScreen() {
                     <img src={peopleOne} alt="chat one" />
                     <div className="online-status"></div>
                   </div>
-                  <p>Doris</p>
+                  <p>Mike</p>
                 </div>
 
                 {/* item */}
@@ -78,7 +77,7 @@ function AdminScreen() {
                     <img src={peopleOne} alt="chat one" />
                     <div className="online-status"></div>
                   </div>
-                  <p>Doris</p>
+                  <p>Jhon</p>
                 </div>
 
                 {/* item */}
@@ -88,7 +87,7 @@ function AdminScreen() {
                     <img src={peopleOne} alt="chat one" />
                     <div className="online-status"></div>
                   </div>
-                  <p>Doris</p>
+                  <p>Jassica</p>
                 </div>
 
                 {/* item */}
@@ -98,7 +97,7 @@ function AdminScreen() {
                     <img src={peopleOne} alt="chat one" />
                     <div className="online-status"></div>
                   </div>
-                  <p>Doris</p>
+                  <p>Bond</p>
                 </div>
 
                 {/* item */}
@@ -108,7 +107,7 @@ function AdminScreen() {
                     <img src={peopleOne} alt="chat one" />
                     <div className="online-status"></div>
                   </div>
-                  <p>Doris</p>
+                  <p>Rush</p>
                 </div>
               </div>
 

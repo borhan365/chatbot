@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from '../../images/wipdata-logo.png'
+import logo from '../../assets/images/wipdata-logo.png'
 import {Link} from 'react-router-dom'
 
 function Header() {

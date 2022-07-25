@@ -9,12 +9,12 @@ import "swiper/css/navigation";
 import { Navigation } from "swiper";
 
 // product images
-import productOne from '../images/products/res1.jpeg'
-import productTwo from '../images/products/res2.jpeg'
-import productThree from '../images/products/res3.jpeg'
-import productFour from '../images/products/res4.jpeg'
-import productFive from '../images/products/res5.png'
-import productSix from '../images/products/res6.png'
+import productOne from '../assets/images/products/res1.jpeg'
+import productTwo from '../assets/images/products/res2.jpeg'
+import productThree from '../assets/images/products/res3.jpeg'
+import productFour from '../assets/images/products/res4.jpeg'
+import productFive from '../assets/images/products/res5.png'
+import productSix from '../assets/images/products/res6.png'
 
 function MessageProduct() {
   return (

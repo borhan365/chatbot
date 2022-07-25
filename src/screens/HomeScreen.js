@@ -3,7 +3,7 @@ import Header from '../components/header/Header'
 
 // product images
 import Chatbot from '../components/chatbot/Chatbot'
-import happyChat from '../images/peoples/happy-chat.jpg'
+import happyChat from '../assets/images/peoples/happy-chat.jpg'
 import HeroSection from '../components/home-page/hero-section/HeroSection';
 
 

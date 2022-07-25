@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import ReactAudioPlayer from 'react-audio-player'
 import { AiOutlineFullscreen } from 'react-icons/ai'
 import { BsFillChatRightTextFill, BsFillEmojiSmileFill, BsThreeDotsVertical } from 'react-icons/bs'
@@ -6,15 +6,14 @@ import { FaTelegramPlane } from 'react-icons/fa'
 import { HiPlus } from 'react-icons/hi'
 import { IoIosArrowDown } from 'react-icons/io'
 import { MdAttachFile } from 'react-icons/md'
-import notification from '../../assets/mp3/message.mp3'
-import book from '../../images/icons/book.png'
-import bot from '../../images/icons/robot.png'
-import robot from "../../images/peoples/online-agent.jpg"
-import logo from '../../images/wipdata-logo.png'
+import book from '../../assets/images/icons/book.png'
+import bot from '../../assets/images/icons/robot.png'
+import robot from "../../assets/images/peoples/online-agent.jpg"
+import logo from '../../assets/images/wipdata-logo.png'
 
 // product images
 import MessageProduct from '../../components/MessageProduct'
-import x from '../../images/icons/x.png'
+import x from '../../assets/images/icons/x.png'
 
 function Chatbot() {
 

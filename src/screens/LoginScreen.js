@@ -5,10 +5,10 @@ import { BsFillPatchExclamationFill, BsFacebook, BsTwitter, BsGoogle } from 'rea
 import {FcGoogle} from 'react-icons/fc'
 import { MdEmail } from 'react-icons/md'
 import { useNavigate } from 'react-router-dom'
-import login from '../images/bg/login.svg'
-import logo from '../images/wipdata-logo.png'
-import login2 from '../images/bg/login.jpg'
-import featuredThumb from '../images/bg/hero-one.png'
+import login from '../assets/images/bg/login.svg'
+import logo from '../assets/images/wipdata-logo.png'
+import login2 from '../assets/images/bg/login.jpg'
+import featuredThumb from '../assets/images/bg/hero-one.png'
 import {Link} from 'react-router-dom'
 
 function LoginScreen() {
