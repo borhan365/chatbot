@@ -2,7 +2,7 @@ import React from 'react'
 import {BsChatDots} from 'react-icons/bs'
 
 // import images
-import comment from '../../../assets/images/icons/comments.png'
+import chatbot from '../../../assets/images/icons/robot.png'
 import analysis from '../../../assets/images/icons/analysis.png'
 import ai from '../../../assets/images/icons/artificial-intelligence.png'
 
@@ -25,19 +25,10 @@ function FeaturedAreaSection() {
               {/* single item */}
               <div className="single-features-item comment-style">
                 <div className="icon">
-                  <img src={comment} alt="comment" />
+                  <img src={chatbot} alt="comment" />
                 </div>
-                <h3>Live Chat Handover</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed est non feugiat sagittis, donec.</p>
-              </div>
-
-              {/* single item */}
-              <div className="single-features-item analysis-style">
-                <div className="icon">
-                  <img src={analysis} alt="analysis" />
-                </div>
-                <h3>Sentiment Analysis</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed est non feugiat sagittis, donec.</p>
+                <h3>Robotic Process Automation</h3>
+                <p>Empowering your end users to make accurate data driven decisions requires visible and valid data, powerful predictive metrics and ensured end user engagement.</p>
               </div>
 
               {/* single item */}
@@ -45,8 +36,17 @@ function FeaturedAreaSection() {
                 <div className="icon">
                   <img src={ai} alt="ai" />
                 </div>
-                <h3>Artificial Intelligence</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed est non feugiat sagittis, donec.</p>
+                <h3>AI Chatbots & Natural Language Processing</h3>
+                <p>Empowering your end users to make accurate data driven decisions requires visible and valid data, powerful predictive metrics and ensured end user engagement.</p>
+              </div>
+
+              {/* single item */}
+              <div className="single-features-item analysis-style">
+                <div className="icon">
+                  <img src={analysis} alt="analysis" />
+                </div>
+                <h3>Analytics & Business Intelligence</h3>
+                <p>Empowering your end users to make accurate data driven decisions requires visible and valid data, powerful predictive metrics and ensured end user engagement.</p>
               </div>
 
             </div>

@@ -1,0 +1,84 @@
+
+/* Medium devices (landscape tablets, 768px and down) */
+@media only screen and (max-width: 768px) {
+  .container {
+    max-width: 96%;
+    margin: 0px auto;
+  }
+  nav {
+    display: none;
+  }
+  .hero-row{
+    flex-direction: column;
+    grid-gap: unset;
+  }
+  .hero-content-wrap h1 {
+    font-size: 40px;
+    line-height: 45px;
+  }
+  .hero-content-wrap .highlight-text {
+    font-size: 30px;
+  }
+  .hero-thumb img{
+    width: 100%;
+  }
+  .featured-wrapper{
+    flex-direction: column;
+  }
+  .goal-wrapper{
+    flex-direction: column-reverse;
+  }
+  .what-we-do-wrapper{
+    flex-direction: column;
+  }
+  .what-we-offer-wrapper{
+    flex-direction: column;
+  }
+  .footer-wrapper{
+    flex-direction: column;
+  }
+  .footer-bottom{
+    flex-direction: column-reverse;
+  }
+  .footer-bottom-item p {
+    font-size: 12px;
+  }
+  .footer-section{
+    padding: 30px 0px;
+  }
+  .goal-content h2 {
+    font-size: 30px;
+    margin: 20px 0px;
+  }
+
+  /* chatbot */
+  /* .chatbot-widget-wrapper {
+    inset: 0;
+  }
+  .chatbot-widget{
+    height: 100%;
+  } */
+  .chatbot-icon {
+    width: 50px;
+    height: 50px;
+  }
+  .chatbot-icon svg {
+    font-size: 23px;
+    color: white;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  
+}

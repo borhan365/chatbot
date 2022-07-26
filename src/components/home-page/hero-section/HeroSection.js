@@ -1,16 +1,19 @@
 import React from 'react'
 import FeaturedThumb from '../../../assets/images/bg/hero-one.png'
+import bigRobot from '../../../assets/images/bg/big-robot.png'
+import bigRobotTwo from '../../../assets/images/bg/big-robot-two.png'
+import chatting from '../../../assets/images/bg/chatting.png'
 
 function HeroSection() {
   return (
     <>
       <section className='hero-section'
-        style={{  
-          backgroundImage: `url(${FeaturedThumb})`,
-          backgroundPosition: 'top',
-          backgroundSize: 'cover',
-          backgroundRepeat: 'no-repeat'
-        }}
+        // style={{  
+        //   backgroundImage: `url(${FeaturedThumb})`,
+        //   backgroundPosition: 'top',
+        //   backgroundSize: 'cover',
+        //   backgroundRepeat: 'no-repeat'
+        // }}
       >
         <div className='container'>
           <div className='hero-row'>
@@ -31,8 +34,8 @@ function HeroSection() {
                 </div>
               </div>
             </div>
-            <div className='hero-col-6'>
-              
+            <div className='hero-col-6 hero-thumb'>
+              <img src={chatting} alt="robot" />
             </div>
           </div>
         </div>

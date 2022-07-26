@@ -47,6 +47,7 @@ function Chatbot() {
 
   return (
     <>
+      <section className='chatbot-section'>
       <div className={resize ? "chatbot-widget-wrapper full-screen" : "chatbot-widget-wrapper"}>
 
           {/* chatbot widget wrapper */}
@@ -158,10 +159,10 @@ function Chatbot() {
 
                 {/* plain text bubble */}
                 <li className='message-bubble-agent'>
-                  <span>Hi, I'm Tidio Chatbot</span>
+                  <span>Hi, I'm WipData Chatbot</span>
                   <img src={bot} alt="bot" />
                 </li>
-                <div class="messageTimestamp fade-enter-done">Yesterday, 20:00</div>
+                {/* <div class="messageTimestamp fade-enter-done">Yesterday, 20:00</div> */}
 
 
                 {/* message by visitor */}
@@ -269,6 +270,24 @@ function Chatbot() {
                   </div>
                 </li>
 
+                {/* message by agent */}
+                <li className="message-bubble-agent">
+                  <span>Hey there! We’re excited to help you out. Let us know your email address so that we can follow up in case we get disconnected.</span>
+                </li>
+
+                {/* message by agent */}
+                <li className='message-bubble-agent visitor-email'>
+                  <div className="message-visitor-email">
+                    <input type="text" placeholder='Email address' />
+                    <button className='message-visitor-email-button'>Submit</button>
+                  </div>
+                </li>
+
+                {/* message by agent */}
+                <li className="message-bubble-agent">
+                  <span>Thank for the submitting and subscribing our email. </span>
+                </li>
+
                 {/* message by visitor */}
                 <li className="message-bubble-visitor">
                   <span>Yes, Please.</span>
@@ -316,6 +335,7 @@ function Chatbot() {
             className='audio-hidden'
           />
       </div>
+      </section>
     </>
   )
 }

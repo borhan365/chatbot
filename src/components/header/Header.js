@@ -8,10 +8,18 @@ function Header() {
       <div className='container'>
         <header>
           {/* logo */}
-          <div className='header-logo'>
+          {/* <div className='header-logo'>
             <a href='/'>
               <img src={logo} />
             </a>
+          </div> */}
+
+          {/* chatbot credit */}
+          <div className='login-logo header-logo'>
+              <Link to="/">
+                <img src={logo} alt="site logo" />
+              </Link>
+            <h2><span className='orangered'>Wip</span> Data</h2>
           </div>
 
           {/* navbar */}
@@ -26,7 +34,7 @@ function Header() {
               <li className='nav-item'>
                 <Link to='/login' className='nav-link'>Login</Link>
               </li>
-              <li className='nav-item'><Link to='/admin' className='nav-link btn'>Admin Panel</Link></li>
+              <li className='nav-item'><Link to='/admin' className='nav-link admin-dashboard-btn'>Admin Panel</Link></li>
             </ul>
           </nav>
         </header>

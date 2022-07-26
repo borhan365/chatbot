@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Header from '../components/header/Header'
+import Footer from '../components/footer'
 
 // product images
 import Chatbot from '../components/chatbot/Chatbot'
@@ -28,6 +29,7 @@ function HomeScreen() {
         <WhatWeDoSection />
         <WhatWeOffer />
       <Chatbot />
+      <Footer />
     </>
   )
 }
