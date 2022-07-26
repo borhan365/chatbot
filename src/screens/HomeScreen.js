@@ -5,6 +5,8 @@ import Header from '../components/header/Header'
 import Chatbot from '../components/chatbot/Chatbot'
 import happyChat from '../assets/images/peoples/happy-chat.jpg'
 import HeroSection from '../components/home-page/hero-section/HeroSection';
+import FeaturedSection from '../components/home-page/featured-section/FeaturedSection';
+import GoalSection from '../components/home-page/GoalSection';
 
 
 function HomeScreen() {
@@ -19,6 +21,8 @@ function HomeScreen() {
     <>
       <Header />
         <HeroSection />
+        <FeaturedSection />
+        <GoalSection />
       <Chatbot />
     </>
   )

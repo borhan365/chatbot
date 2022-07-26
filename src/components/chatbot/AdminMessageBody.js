@@ -1,27 +1,28 @@
 import React, { useState } from 'react'
-import { AiOutlineUser } from 'react-icons/ai'
-import { BsCameraVideo, BsFillEmojiSmileFill, BsXLg } from 'react-icons/bs'
+import { AiOutlineDelete, AiOutlineUser } from 'react-icons/ai'
+import { BsArchive, BsCameraVideo, BsFillEmojiSmileFill, BsXLg } from 'react-icons/bs'
 import { FaTelegramPlane } from 'react-icons/fa'
 import { HiPlus } from 'react-icons/hi'
+import {VscArchive, VscMute} from 'react-icons/vsc'
+import {GoMute} from 'react-icons/go'
+import {BiVolumeMute} from 'react-icons/bi'
 import { MdAttachFile, MdCall, MdVideoCall } from 'react-icons/md'
 import book from '../../assets/images/icons/book.png'
 import bot from '../../assets/images/icons/robot.png'
 import robot from "../../assets/images/peoples/online-agent.jpg"
 import logo from '../../assets/images/wipdata-logo.png'
+import x from '../../assets/images/icons/x.png'
 
 // product images
 import { FiMoreVertical, FiPhoneCall, FiSearch } from 'react-icons/fi'
 import happyChat from '../../assets/images/peoples/happy-chat.jpg'
 
 function AdminMessageBody() {
-
-  // const [toggle, setToggle] = useState(false); 
+  
   const [callToggle, setCallToggle] = useState(true);
+  const [searchToggle, setSearchToggle] = useState(false);
+  const [menuToggle, setMenuToggle] = useState(false);
   const [whichIcon, setWhichIcon] = useState('');
-
-  // const handleToggle = () => {
-  //   setToggle(!toggle);
-  // }
 
   // call cancle
   const callModel = (iconName) => {
@@ -29,13 +30,11 @@ function AdminMessageBody() {
     setWhichIcon(iconName)
   }
 
-  console.log(whichIcon)
-
   return (
     <>
       <div className="chatbox-wrapper">
 
-        {/* audio call model */}
+        {/* call model */}
         <div className={callToggle ? "call-model-container" : "call-model-container active"}>
           <div className='call-model-wrapper'>
             <div className='call-user-avatar'>
@@ -44,7 +43,7 @@ function AdminMessageBody() {
             {/* user name */}
             <div className='call-user-content'>
               <h2>Doris Brown</h2>
-              <p>Start Audio Call</p>
+              <p>Start { whichIcon == "audio" && "Audio" || whichIcon == "video" && "Video" } Call</p>
             </div>
             {/* user actions */}
             <div className='call-user-actions'>
@@ -86,6 +85,31 @@ function AdminMessageBody() {
                 {/* agent right side options */}
                 <div className="chatbot-widget-header-right">
 
+                  {/* visibility hidden */}
+                  {/* search */}
+                  <div className={searchToggle ? 'search-model active' : 'search-model'}>
+                    <input placeholder='Search here' />
+                    <BsXLg onClick={() => setSearchToggle(!searchToggle)} />
+                  </div>
+
+                  {/* dropdown menu */}
+                  <div className={menuToggle ? 'dropdown-menu-wrapper active' : 'dropdown-menu-wrapper'}>
+                    <ul>
+                      <li>
+                        <span>Archive</span> 
+                        <VscArchive />
+                      </li>
+                      <li>
+                        <span>Muted</span> 
+                        <BiVolumeMute />
+                      </li>
+                      <li>
+                        <span>Delete</span> 
+                        <AiOutlineDelete />
+                      </li>
+                    </ul>
+                  </div>
+
                   {/* chatbot credit */}
                   <div className='chatbot-creator'>
                     <p>Powered by</p>
@@ -96,7 +120,7 @@ function AdminMessageBody() {
 
                   <div className='chatbox-header-right-options'>
                     {/* search */}
-                    <div className='chatbox-header-icon'>
+                    <div className='chatbox-header-icon' onClick={() => setSearchToggle(!searchToggle)}>
                       <FiSearch />
                     </div>
 
@@ -114,8 +138,8 @@ function AdminMessageBody() {
                       <AiOutlineUser />
                     </div>
 
-                    <div className='chatbox-header-icon'>
-                      <FiMoreVertical />
+                    <div className='chatbox-header-icon' onClick={() => setMenuToggle(!menuToggle)}>
+                      { !menuToggle ? <FiMoreVertical /> : <img src={x} alt="cancle" /> } 
                     </div>
 
                   </div>

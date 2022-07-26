@@ -26,7 +26,7 @@ function Header() {
               <li className='nav-item'>
                 <Link to='/login' className='nav-link'>Login</Link>
               </li>
-              <li className='nav-item'><Link to='/login' className='nav-link btn'>Admin Panel</Link></li>
+              <li className='nav-item'><Link to='/admin' className='nav-link btn'>Admin Panel</Link></li>
             </ul>
           </nav>
         </header>

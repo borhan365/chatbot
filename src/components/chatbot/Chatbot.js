@@ -1,19 +1,21 @@
 import React, { useState } from 'react'
 import ReactAudioPlayer from 'react-audio-player'
-import { AiOutlineFullscreen } from 'react-icons/ai'
-import { BsFillChatRightTextFill, BsFillEmojiSmileFill, BsThreeDotsVertical } from 'react-icons/bs'
+import { AiOutlineDelete, AiOutlineFullscreen } from 'react-icons/ai'
+import { BiVolumeMute } from 'react-icons/bi'
+import { BsFillChatRightTextFill, BsFillEmojiSmileFill, BsThreeDotsVertical, BsXLg } from 'react-icons/bs'
 import { FaTelegramPlane } from 'react-icons/fa'
 import { HiPlus } from 'react-icons/hi'
 import { IoIosArrowDown } from 'react-icons/io'
 import { MdAttachFile } from 'react-icons/md'
+import { VscArchive } from 'react-icons/vsc'
 import book from '../../assets/images/icons/book.png'
 import bot from '../../assets/images/icons/robot.png'
 import robot from "../../assets/images/peoples/online-agent.jpg"
 import logo from '../../assets/images/wipdata-logo.png'
 
 // product images
-import MessageProduct from '../../components/MessageProduct'
 import x from '../../assets/images/icons/x.png'
+import MessageProduct from '../../components/MessageProduct'
 
 function Chatbot() {
 
@@ -21,6 +23,8 @@ function Chatbot() {
 
   const [toggle, setToggle] = useState(false); 
   const [resize, setResize] = useState(false);
+  const [formToggle, setFormToggle] = useState(false);
+  const [menuToggle, setMenuToggle] = useState(false);
 
   const handleToggle = (e) => {
     setToggle(!toggle);
@@ -44,11 +48,59 @@ function Chatbot() {
   return (
     <>
       <div className={resize ? "chatbot-widget-wrapper full-screen" : "chatbot-widget-wrapper"}>
+
           {/* chatbot widget wrapper */}
           <div className={toggle ? "chatbot-widget active" : "chatbot-widget"}>
+
+            {/* user contact form */}
+            <form className={!formToggle ? "chatbot-user-form active" : "chatbot-user-form"}>
+              <div className='chatbot-notices'>
+                <p>We are here to answer any pre-purchase inquiries! For post-purchase support, please submit a support ticket by visiting https://support.wipdata.com.</p>
+                <BsXLg onClick={() => setFormToggle(!formToggle)} className='close-user-register-form'/>
+              </div>
+              <div className='form-curve'>
+                <svg viewBox="0 0 500 150" preserveAspectRatio="none" class="viewBox">
+                  <path d="M0.00,49.98 C254.51,72.06 306.43,22.41 500.00,49.98 L500.00,150.00 L0.00,150.00 Z" class="path">
+                  </path>
+                </svg>
+              </div>
+              <div className='chatbot-user-form-wrap'>
+                <div className='form-group'>
+                  <label>Full name</label>
+                  <input className='input-control' placeholder='Your full name' />
+                </div>
+                <div className='form-group'>
+                  <label>Email Address</label>
+                  <input className='input-control' placeholder='Email address' />
+                </div>
+                <div className='form-group'>
+                  <label>Full name</label>
+                  <textarea className='input-control-textarea' placeholder='Descriptions'></textarea>
+                </div>
+                <button className='chatbot-user-form-submit-button'>Submit</button>
+              </div>
+            </form>
             
             {/* chat header */}
             <div className="chatbot-widget-header">
+
+              {/* dropdown menu */}
+              <div className={menuToggle ? 'dropdown-menu-wrapper chatbot-dropdown active' : 'dropdown-menu-wrapper chatbot-dropdown'}>
+                  <ul>
+                    <li>
+                      <span>Archive</span> 
+                      <VscArchive />
+                    </li>
+                    <li>
+                      <span>Muted</span> 
+                      <BiVolumeMute />
+                    </li>
+                    <li>
+                      <span>Delete</span> 
+                      <AiOutlineDelete />
+                    </li>
+                  </ul>
+              </div>
 
               {/* agent presence */}
               <div className="chatbot-widget-agent-precence">
@@ -81,8 +133,8 @@ function Chatbot() {
 
                   <div className='chatbot-widget-header-right-options'>
                     {/* options */}
-                    <div className='chatbot-widget-options'>
-                      <BsThreeDotsVertical />
+                    <div className='chatbot-widget-options' onClick={() => setMenuToggle(!menuToggle)}>
+                      {!menuToggle ? <BsThreeDotsVertical /> : <BsXLg className='cross-chatbot-dropdown' />}
                     </div>
 
                     {/* resize */}
@@ -101,6 +153,7 @@ function Chatbot() {
 
             {/* chat conversation group body */}
             <div className="chat-conversation-wrapper">
+              {/* message body */}
               <ul className='message-body'>
 
                 {/* plain text bubble */}
@@ -251,8 +304,7 @@ function Chatbot() {
             </div>
           </div>
 
-          {/* chatbot open icon */}
-          {/* if resize is true the hide chatbot icon */}
+          {/* chatbot open icon && if resize is true the hide chatbot icon */}
           {
             resize ? "" : <div className='chatbot-icon' onClick={handleToggle}>
             {toggle ? <img src={x} alt="x" /> : <BsFillChatRightTextFill />}

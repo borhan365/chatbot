@@ -128,7 +128,7 @@ function AdminScreen() {
 
                   {/* item */}
                   <li className='recent-chat-item'>
-                    <Link to="/">
+                    <Link to="/admin">
                       <div className='recent-chat-item-content'>
                         {/* thumb */}
                         <div className='featured-chat-thumb'>
@@ -150,7 +150,7 @@ function AdminScreen() {
 
                   {/* item */}
                   <li className='recent-chat-item'>
-                    <Link to="/">
+                    <Link to="/admin">
                       <div className='recent-chat-item-content'>
                         {/* thumb */}
                         <div className='featured-chat-thumb'>
@@ -169,7 +169,7 @@ function AdminScreen() {
 
                   {/* item */}
                   <li className='recent-chat-item active'>
-                    <Link to="/">
+                    <Link to="/admin">
                       <div className='recent-chat-item-content'>
                         {/* thumb */}
                         <div className='featured-chat-thumb'>
@@ -188,7 +188,7 @@ function AdminScreen() {
 
                   {/* item */}
                   <li className='recent-chat-item'>
-                    <Link to="/">
+                    <Link to="/admin">
                       <div className='recent-chat-item-content'>
                         {/* thumb */}
                         <div className='featured-chat-thumb'>
@@ -207,7 +207,7 @@ function AdminScreen() {
 
                   {/* item */}
                   <li className='recent-chat-item'>
-                    <Link to="/">
+                    <Link to="/admin">
                       <div className='recent-chat-item-content'>
                         {/* thumb */}
                         <div className='featured-chat-thumb'>
