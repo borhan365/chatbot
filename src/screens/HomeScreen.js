@@ -7,6 +7,8 @@ import happyChat from '../assets/images/peoples/happy-chat.jpg'
 import HeroSection from '../components/home-page/hero-section/HeroSection';
 import FeaturedSection from '../components/home-page/featured-section/FeaturedSection';
 import GoalSection from '../components/home-page/GoalSection';
+import WhatWeDoSection from '../components/home-page/WhatWeDoSection';
+import WhatWeOffer from '../components/home-page/WhatWeOffer';
 
 
 function HomeScreen() {
@@ -23,6 +25,8 @@ function HomeScreen() {
         <HeroSection />
         <FeaturedSection />
         <GoalSection />
+        <WhatWeDoSection />
+        <WhatWeOffer />
       <Chatbot />
     </>
   )
