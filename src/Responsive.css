@@ -102,7 +102,7 @@
     background: #fff;
     border-radius: 8px;
     padding: 20px 10px;
-    width: 375px;
+    width: 320px;
     font-family: poppins;
     font-size: 14px;
     padding-right: 35px;
@@ -124,16 +124,19 @@
     font-size: 17px;
   }
   .chatbot-widget-wrapper {
-    position: fixed;
+    position: absolute;
     right: 0px;
-    bottom: 0px;
+    top: 0px;
     width: 100%;
     height: 100%;
+    z-index: 9999;
   }
   .chatbot-widget.active {
     height: 100vh;
     width: 100%;
     border-radius: 0px;
+    position: fixed;
+    inset: 0;
   }
   ul.message-body {
     padding-bottom: 160px;
@@ -160,6 +163,7 @@
     bottom: 0px;
     background: white;
     z-index: 99;
+    width: 100%;
   }
   .call-model-wrapper{
     height: 285px;
@@ -190,6 +194,7 @@
     position: fixed;
     bottom: 15px;
     right: 15px;
+    
   }
   .chatbot-icon svg {
     font-size: 23px;
@@ -315,6 +320,17 @@
   }
   .login-logo h2 {
     font-size: 23px;
+  }
+  .dropdown-menu-wrapper ul li {
+    font-size: 14px;
+  }
+  .dropdown-menu-wrapper ul {
+    width: 130px;
+  }
+  section.header-section.active header{
+    padding: 10px 0px;
+    max-width: 95%;
+    margin: auto;
   }
 }
 

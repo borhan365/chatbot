@@ -1,16 +1,16 @@
 import React from 'react'
+import { BsFacebook, BsLinkedin, BsTwitter, BsYoutube } from 'react-icons/bs'
 import { Link } from 'react-router-dom'
-import {BsFacebook, BsTwitter, BsLinkedin, BsYoutube} from 'react-icons/bs'
 
 // images
-import logo from '../../assets/images/wipdata-logo.png'
 import bg from '../../assets/images/bg/bg.png'
+import logo from '../../assets/images/wipdata-logo.png'
 
 function index() {
   return (
     <>
     <section className='footer-section'>
-      <div class="dia-footer-shape3 position-absolute">
+      <div className="dia-footer-shape3 position-absolute">
           <img src={bg} alt="bg shape" />
       </div>
       <div className="container">
@@ -20,12 +20,12 @@ function index() {
           <div className="footer-item">
 
             {/* logo */}
-            <div class="footer-item-logo">
+            <div className="footer-item-logo">
               <Link to="/">
                 <img src={logo} alt="site logo" />
               </Link>
               <h2>
-                <span class="orangered">Wip</span> Data
+                <span className="orangered">Wip</span> Data
               </h2>
             </div>
 

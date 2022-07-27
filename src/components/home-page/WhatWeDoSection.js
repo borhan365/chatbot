@@ -1,6 +1,6 @@
 import React from 'react'
-import {MdKeyboardArrowRight} from 'react-icons/md'
-import {Link} from 'react-router-dom'
+import { MdKeyboardArrowRight } from 'react-icons/md'
+import { Link } from 'react-router-dom'
 
 // import icons
 import iconOne from '../../assets/images/icons/icon1.png'
@@ -12,8 +12,8 @@ function WhatWeDoSection() {
   return (
     <section className='what-we-do-section'>
       <div className="container">
-        <div class="section-title">
-          <span class="sub-title purple-color">What We Do</span>
+        <div className="section-title">
+          <span className="sub-title purple-color">What We Do</span>
           <h2>Our work is delivered by the best team in the world</h2>
         </div>
         <div className="what-we-do-wrapper">

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import ReactAudioPlayer from 'react-audio-player'
 import { AiOutlineDelete, AiOutlineFullscreen } from 'react-icons/ai'
 import { BiVolumeMute } from 'react-icons/bi'
@@ -17,12 +17,12 @@ import logo from '../../assets/images/wipdata-logo.png'
 import x from '../../assets/images/icons/x.png'
 import MessageProduct from '../../components/MessageProduct'
 
-import useIcon from '../../assets/images/icons/use.png'
-import chatbotIcon from '../../assets/images/icons/robot.png'
-import installIcon from '../../assets/images/icons/install.png'
-import settingIcon from '../../assets/images/icons/setting.png'
 import billingIcon from '../../assets/images/icons/billing.png'
 import helpIcon from '../../assets/images/icons/book.png'
+import installIcon from '../../assets/images/icons/install.png'
+import chatbotIcon from '../../assets/images/icons/robot.png'
+import settingIcon from '../../assets/images/icons/setting.png'
+import useIcon from '../../assets/images/icons/use.png'
 
 function Chatbot() {
 
@@ -32,13 +32,25 @@ function Chatbot() {
   const [resize, setResize] = useState(false);
   const [formToggle, setFormToggle] = useState(false);
   const [menuToggle, setMenuToggle] = useState(false);
+  const [width, setWidth] = useState(window.innerWidth); 
+
+  const mobileViewport = () => {
+    setWidth(window.innerWidth)
+  }
+
+  useEffect(() => {
+    window.addEventListener('resize', mobileViewport)
+    return () => window.removeEventListener('resize', mobileViewport)
+  }, [])
+
+  const isMobile = width <= 768
 
   const handleToggle = (e) => {
     setToggle(!toggle);
 
     // play notification sound
     if(!toggle) {
-      start();
+      startSound();
     }
   }
 
@@ -48,7 +60,7 @@ function Chatbot() {
   }
 
   // play massege notification
-  const start = () => {
+  const startSound = () => {
     audio.play()
   }
 
@@ -67,8 +79,8 @@ function Chatbot() {
                 <BsXLg onClick={() => setFormToggle(!formToggle)} className='close-user-register-form'/>
               </div>
               <div className='form-curve'>
-                <svg viewBox="0 0 500 150" preserveAspectRatio="none" class="viewBox">
-                  <path d="M0.00,49.98 C254.51,72.06 306.43,22.41 500.00,49.98 L500.00,150.00 L0.00,150.00 Z" class="path">
+                <svg viewBox="0 0 500 150" preserveAspectRatio="none" className="viewBox">
+                  <path d="M0.00,49.98 C254.51,72.06 306.43,22.41 500.00,49.98 L500.00,150.00 L0.00,150.00 Z" className="path">
                   </path>
                 </svg>
               </div>
@@ -169,7 +181,7 @@ function Chatbot() {
                   <span>Hi, I'm WipData Chatbot</span>
                   <img src={bot} alt="bot" />
                 </li>
-                {/* <div class="messageTimestamp fade-enter-done">Yesterday, 20:00</div> */}
+                {/* <div className="messageTimestamp fade-enter-done">Yesterday, 20:00</div> */}
 
                 <li className='message-bubble-agent'>
                   <span>Before we begin, please choose one of the topics. What would you like to explore?</span>
@@ -231,12 +243,12 @@ function Chatbot() {
                 {/* time slot */}
                 <li className="message-day-slot">
                   <div className='message-day-slot-wrap'>
-                    <li className="message-day-slot-item">1</li>
-                    <li className="message-day-slot-item">2</li>
-                    <li className="message-day-slot-item">3</li>
-                    <li className="message-day-slot-item">4</li>
-                    <li className="message-day-slot-item">5</li>
-                    <li className="message-day-slot-item">6+</li>
+                    <span className="message-day-slot-item">1</span>
+                    <span className="message-day-slot-item">2</span>
+                    <span className="message-day-slot-item">3</span>
+                    <span className="message-day-slot-item">4</span>
+                    <span className="message-day-slot-item">5</span>
+                    <span className="message-day-slot-item">6+</span>
                   </div>
                 </li>
 
@@ -254,10 +266,10 @@ function Chatbot() {
                 {/* babble typing... */}
                 <li className="message-bubble-agent">
                   <span className="tying">Typing</span>
-                  <span class="animate-typing">
-                    <span class="dot ms-1"></span>
-                    <span class="dot ms-1"></span>
-                    <span class="dot ms-1"></span>
+                  <span className="animate-typing">
+                    <span className="dot ms-1"></span>
+                    <span className="dot ms-1"></span>
+                    <span className="dot ms-1"></span>
                   </span>
                 </li>
 
@@ -293,13 +305,13 @@ function Chatbot() {
                 {/* time slot */}
                 <li className="message-day-slot">
                   <div className='message-day-slot-wrap'>
-                    <li className="message-day-slot-item">Saturday</li>
-                    <li className="message-day-slot-item">SunDay</li>
-                    <li className="message-day-slot-item">Monday</li>
-                    <li className="message-day-slot-item">Tusday</li>
-                    <li className="message-day-slot-item">Wednesday</li>
-                    <li className="message-day-slot-item">Thusday</li>
-                    <li className="message-day-slot-item">Friday</li>
+                    <span className="message-day-slot-item">Saturday</span>
+                    <span className="message-day-slot-item">SunDay</span>
+                    <span className="message-day-slot-item">Monday</span>
+                    <span className="message-day-slot-item">Tusday</span>
+                    <span className="message-day-slot-item">Wednesday</span>
+                    <span className="message-day-slot-item">Thusday</span>
+                    <span className="message-day-slot-item">Friday</span>
                   </div>
                 </li>
 
@@ -312,8 +324,8 @@ function Chatbot() {
                 {/* time slot */}
                 <li className="message-day-slot">
                   <div className='message-day-slot-wrap'>
-                    <li className="message-day-slot-item active">Yes, Please</li>
-                    <li className="message-day-slot-item">No thanks</li>
+                    <span className="message-day-slot-item active">Yes, Please</span>
+                    <span className="message-day-slot-item">No thanks</span>
                   </div>
                 </li>
 
@@ -371,11 +383,9 @@ function Chatbot() {
           </div>
 
           {/* chatbot open icon && if resize is true the hide chatbot icon */}
-          {
-            resize ? "" : <div className='chatbot-icon' onClick={handleToggle}>
+          { resize ? "" : <div className='chatbot-icon' onClick={handleToggle}>
             {toggle ? <img src={x} alt="x" /> : <BsFillChatRightTextFill />}
-          </div>
-          }
+          </div> }
           <ReactAudioPlayer
             src={audio}
             controls

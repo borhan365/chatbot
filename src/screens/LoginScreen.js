@@ -1,15 +1,11 @@
-import axios from 'axios'
 import { useState } from 'react'
 import { useForm } from 'react-hook-form'
-import { BsFillPatchExclamationFill, BsFacebook, BsTwitter, BsGoogle } from 'react-icons/bs'
-import {FcGoogle} from 'react-icons/fc'
+import { BsFacebook, BsFillPatchExclamationFill, BsTwitter } from 'react-icons/bs'
+import { FcGoogle } from 'react-icons/fc'
 import { MdEmail } from 'react-icons/md'
-import { useNavigate } from 'react-router-dom'
-import login from '../assets/images/bg/login.svg'
-import logo from '../assets/images/wipdata-logo.png'
-import login2 from '../assets/images/bg/login.jpg'
+import { Link, useNavigate } from 'react-router-dom'
 import featuredThumb from '../assets/images/bg/hero-one.png'
-import {Link} from 'react-router-dom'
+import logo from '../assets/images/wipdata-logo.png'
 
 function LoginScreen() {
 
@@ -93,7 +89,7 @@ function LoginScreen() {
               {/* submit button */}
               <div className='input-group'>
                 <button id='loginForm' type='submit' className='login-button'> 
-                {loading && !wrongPassword ? <div class="loading"></div> : "Login" }</button>
+                {loading && !wrongPassword ? <div className="loading"></div> : "Login" }</button>
                 
               </div>
 

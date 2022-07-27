@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import logo from '../../assets/images/wipdata-logo.png'
 import burgerMenu from '../../assets/images/icons/menu-burger.svg'
 import burgerMenu1 from '../../assets/images/icons/menu.png'
@@ -9,9 +9,23 @@ import { BsXLg } from 'react-icons/bs'
 function Header() {
 
   const [menuToggle, setMenuToggle] = useState(false);
+  const [sticky, setSticky] = useState(window.scrollY); 
+
+  const headerSticky = () => {
+    setSticky(window.scrollY)
+  }
+
+  useEffect(() => {
+    window.addEventListener('scroll', headerSticky)
+    return () => window.removeEventListener('scroll', headerSticky)
+  }, [])
+
+  const isScrolled = sticky >= 1
+
+  console.log(isScrolled)
 
   return (
-    <section className='header-section'>
+    <section className={isScrolled ? 'header-section active' : 'header-section'}>
       <div className='container'>
         <header>
           

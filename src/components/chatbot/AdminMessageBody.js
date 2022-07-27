@@ -1,28 +1,27 @@
-import React, { useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { AiOutlineDelete, AiOutlineUser } from 'react-icons/ai'
-import { BsArchive, BsCameraVideo, BsFillEmojiSmileFill, BsXLg } from 'react-icons/bs'
+import { BiVolumeMute } from 'react-icons/bi'
+import { BsCameraVideo, BsFillEmojiSmileFill, BsXLg } from 'react-icons/bs'
 import { FaTelegramPlane } from 'react-icons/fa'
 import { HiPlus } from 'react-icons/hi'
-import {VscArchive, VscMute} from 'react-icons/vsc'
-import {GoMute} from 'react-icons/go'
-import {BiVolumeMute} from 'react-icons/bi'
 import { MdAttachFile, MdCall, MdVideoCall } from 'react-icons/md'
+import { VscArchive } from 'react-icons/vsc'
 import book from '../../assets/images/icons/book.png'
 import bot from '../../assets/images/icons/robot.png'
+import x from '../../assets/images/icons/x.png'
 import robot from "../../assets/images/peoples/online-agent.jpg"
 import logo from '../../assets/images/wipdata-logo.png'
-import x from '../../assets/images/icons/x.png'
 
 // product images
 import { FiMoreVertical, FiPhoneCall, FiSearch } from 'react-icons/fi'
 import happyChat from '../../assets/images/peoples/happy-chat.jpg'
 
-import useIcon from '../../assets/images/icons/use.png'
-import chatbotIcon from '../../assets/images/icons/robot.png'
-import installIcon from '../../assets/images/icons/install.png'
-import settingIcon from '../../assets/images/icons/setting.png'
 import billingIcon from '../../assets/images/icons/billing.png'
 import helpIcon from '../../assets/images/icons/book.png'
+import installIcon from '../../assets/images/icons/install.png'
+import chatbotIcon from '../../assets/images/icons/robot.png'
+import settingIcon from '../../assets/images/icons/setting.png'
+import useIcon from '../../assets/images/icons/use.png'
 
 function AdminMessageBody() {
   
@@ -30,6 +29,14 @@ function AdminMessageBody() {
   const [searchToggle, setSearchToggle] = useState(false);
   const [menuToggle, setMenuToggle] = useState(false);
   const [whichIcon, setWhichIcon] = useState('');
+
+  const searchRef = useRef(null);
+
+  useEffect(() => {
+    if (searchRef.current) {
+      searchRef.current.focus();
+    }
+  }, []);
 
   // call cancle
   const callModel = (iconName) => {
@@ -95,7 +102,7 @@ function AdminMessageBody() {
                   {/* visibility hidden */}
                   {/* search */}
                   <div className={searchToggle ? 'search-model active' : 'search-model'}>
-                    <input placeholder='Search here...' />
+                    <input ref={searchRef} placeholder='Search here...' />
                     <FiSearch className='search-model-search-icon' />
                     <BsXLg onClick={() => setSearchToggle(!searchToggle)} />
                   </div>
@@ -164,7 +171,7 @@ function AdminMessageBody() {
                   <span>Hi, I'm WipData Chatbot</span>
                   <img src={bot} alt="bot" />
                 </li>
-                {/* <div class="messageTimestamp fade-enter-done">Yesterday, 20:00</div> */}
+                {/* <div className="messageTimestamp fade-enter-done">Yesterday, 20:00</div> */}
                 
                 <li className='message-bubble-agent'>
                   <span>Before we begin, please choose one of the topics. What would you like to explore?</span>
@@ -226,12 +233,12 @@ function AdminMessageBody() {
                 {/* time slot */}
                 <li className="message-day-slot">
                   <div className='message-day-slot-wrap'>
-                    <li className="message-day-slot-item">1</li>
-                    <li className="message-day-slot-item">2</li>
-                    <li className="message-day-slot-item">3</li>
-                    <li className="message-day-slot-item">4</li>
-                    <li className="message-day-slot-item">5</li>
-                    <li className="message-day-slot-item">6+</li>
+                    <span className="message-day-slot-item">1</span>
+                    <span className="message-day-slot-item">2</span>
+                    <span className="message-day-slot-item">3</span>
+                    <span className="message-day-slot-item">4</span>
+                    <span className="message-day-slot-item">5</span>
+                    <span className="message-day-slot-item">6+</span>
                   </div>
                 </li>
 
@@ -249,10 +256,10 @@ function AdminMessageBody() {
                 {/* babble typing... */}
                 <li className="message-bubble-agent">
                   <span className="tying">Typing</span>
-                  <span class="animate-typing">
-                    <span class="dot ms-1"></span>
-                    <span class="dot ms-1"></span>
-                    <span class="dot ms-1"></span>
+                  <span className="animate-typing">
+                    <span className="dot ms-1"></span>
+                    <span className="dot ms-1"></span>
+                    <span className="dot ms-1"></span>
                   </span>
                 </li>
 
@@ -288,13 +295,13 @@ function AdminMessageBody() {
                 {/* time slot */}
                 <li className="message-day-slot">
                   <div className='message-day-slot-wrap'>
-                    <li className="message-day-slot-item">Saturday</li>
-                    <li className="message-day-slot-item">SunDay</li>
-                    <li className="message-day-slot-item">Monday</li>
-                    <li className="message-day-slot-item">Tusday</li>
-                    <li className="message-day-slot-item">Wednesday</li>
-                    <li className="message-day-slot-item">Thusday</li>
-                    <li className="message-day-slot-item">Friday</li>
+                    <span className="message-day-slot-item">Saturday</span>
+                    <span className="message-day-slot-item">SunDay</span>
+                    <span className="message-day-slot-item">Monday</span>
+                    <span className="message-day-slot-item">Tusday</span>
+                    <span className="message-day-slot-item">Wednesday</span>
+                    <span className="message-day-slot-item">Thusday</span>
+                    <span className="message-day-slot-item">Friday</span>
                   </div>
                 </li>
 
@@ -307,8 +314,8 @@ function AdminMessageBody() {
                 {/* time slot */}
                 <li className="message-day-slot">
                   <div className='message-day-slot-wrap'>
-                    <li className="message-day-slot-item active">Yes, Please</li>
-                    <li className="message-day-slot-item">No thanks</li>
+                    <span className="message-day-slot-item active">Yes, Please</span>
+                    <span className="message-day-slot-item">No thanks</span>
                   </div>
                 </li>
 

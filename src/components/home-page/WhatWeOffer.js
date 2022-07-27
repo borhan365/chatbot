@@ -1,17 +1,17 @@
 import React from 'react'
-import {MdKeyboardArrowRight} from 'react-icons/md'
-import {Link} from 'react-router-dom'
+import { MdKeyboardArrowRight } from 'react-icons/md'
+import { Link } from 'react-router-dom'
 
 // import images
-import websiteIcon from '../../assets/images/icons/website.png'
 import liveChatIcon from '../../assets/images/icons/livechat.png'
 import slackIcon from '../../assets/images/icons/slack.png'
+import websiteIcon from '../../assets/images/icons/website.png'
 
 function WhatWeOffer() {
   return (
     <section className='what-we-offer-section'>
-      <div class="section-title">
-        <span class="sub-title purple-color">What We Offer</span>
+      <div className="section-title">
+        <span className="sub-title purple-color">What We Offer</span>
         <h2>Connect with users across channels</h2>
       </div>
       <div className='container'>

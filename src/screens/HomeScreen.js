@@ -22,13 +22,13 @@ function HomeScreen() {
 
   return (
     <>
+      <Chatbot />
       <Header />
         <HeroSection />
         <FeaturedSection />
         <GoalSection />
         <WhatWeDoSection />
         <WhatWeOffer />
-      <Chatbot />
       <Footer />
     </>
   )

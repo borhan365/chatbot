@@ -1,18 +1,15 @@
-import React, {useState, useEffect} from 'react'
+import React, { useEffect, useState } from 'react'
+import { AiOutlineUser } from 'react-icons/ai'
+import { BsBookmarks, BsBox, BsBrightnessHigh, BsBug, BsChatLeftQuote, BsFolder2Open, BsImage, BsPlusCircle } from 'react-icons/bs'
+import { FiSearch } from 'react-icons/fi'
+import { RiGroupLine } from 'react-icons/ri'
 import { Link } from 'react-router-dom'
-import logo from '../assets/images/wipdata-logo.png'
-import {AiOutlineUser} from 'react-icons/ai'
-import peopleOne from '../assets/images/peoples/chat-four.jpg'
-import peopleTwo from '../assets/images/peoples/chat-one.jpg'
-import peopleThree from '../assets/images/peoples/chat-two.jpg'
-import peopleFour from '../assets/images/peoples/chat-one.jpg'
 import peopleFive from '../assets/images/peoples/chat-five.jpg'
-import Chatbot from '../components/chatbot/Chatbot'
+import peopleOne from '../assets/images/peoples/chat-four.jpg'
+import { default as peopleFour, default as peopleTwo } from '../assets/images/peoples/chat-one.jpg'
+import peopleThree from '../assets/images/peoples/chat-two.jpg'
+import logo from '../assets/images/wipdata-logo.png'
 import AdminMessageBody from '../components/chatbot/AdminMessageBody'
-import { BsArrowsMove, BsBagCheck, BsBell, BsBookmarks, BsBox, BsBrightnessHigh, BsBug, BsChatLeftQuote, BsFolder2Open, BsImage, BsPlusCircle } from 'react-icons/bs'
-import {RiGroupLine} from 'react-icons/ri'
-import {BiAddToQueue} from 'react-icons/bi'
-import {FiSearch} from 'react-icons/fi'
 
 function AdminScreen() {
 
@@ -29,10 +26,8 @@ function AdminScreen() {
         }
     }, []);
 
-    const isMobile = width <= 768;
 
-    console.log(isMobile)
-    console.log("chat show" + showChat)
+    const isMobile = width <= 768;
 
   return (
     <>
@@ -198,7 +193,7 @@ function AdminScreen() {
                         {/* content */}
                         <div className='recent-chatbox-content'>
                           <h2>Albert Rodarte</h2>
-                          <p className='typing-in-chat'>typing <span class="animate-typing"><span class="dot ms-1"></span><span class="dot ms-1"></span><span class="dot ms-1"></span></span></p>
+                          <p className='typing-in-chat'>typing <span className="animate-typing"><span className="dot ms-1"></span><span className="dot ms-1"></span><span className="dot ms-1"></span></span></p>
                         </div>
                       </div>
                       <p>02:50</p>
@@ -295,7 +290,7 @@ function AdminScreen() {
                         {/* content */}
                         <div className='recent-chatbox-content'>
                           <h2>Albert Rodarte</h2>
-                          <p className='typing-in-chat'>typing <span class="animate-typing"><span class="dot ms-1"></span><span class="dot ms-1"></span><span class="dot ms-1"></span></span></p>
+                          <p className='typing-in-chat'>typing <span className="animate-typing"><span className="dot ms-1"></span><span className="dot ms-1"></span><span className="dot ms-1"></span></span></p>
                         </div>
                       </div>
                       <p>02:50</p>
@@ -392,7 +387,7 @@ function AdminScreen() {
                         {/* content */}
                         <div className='recent-chatbox-content'>
                           <h2>Albert Rodarte</h2>
-                          <p className='typing-in-chat'>typing <span class="animate-typing"><span class="dot ms-1"></span><span class="dot ms-1"></span><span class="dot ms-1"></span></span></p>
+                          <p className='typing-in-chat'>typing <span className="animate-typing"><span className="dot ms-1"></span><span className="dot ms-1"></span><span className="dot ms-1"></span></span></p>
                         </div>
                       </div>
                       <p>02:50</p>
