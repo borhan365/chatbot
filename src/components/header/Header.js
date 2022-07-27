@@ -1,5 +1,6 @@
 import React from 'react'
 import logo from '../../assets/images/wipdata-logo.png'
+import burgerMenu from '../../assets/images/icons/menu-burger.svg'
 import {Link} from 'react-router-dom'
 
 function Header() {
@@ -7,12 +8,7 @@ function Header() {
     <section className='header-section'>
       <div className='container'>
         <header>
-          {/* logo */}
-          {/* <div className='header-logo'>
-            <a href='/'>
-              <img src={logo} />
-            </a>
-          </div> */}
+          
 
           {/* chatbot credit */}
           <div className='login-logo header-logo'>
@@ -20,6 +16,11 @@ function Header() {
                 <img src={logo} alt="site logo" />
               </Link>
             <h2><span className='orangered'>Wip</span> Data</h2>
+          </div>
+
+          {/* mobile burger menu */}
+          <div className="mobile-header-burger-menu desktop-hide">
+            <img src={burgerMenu} alt="burger" />
           </div>
 
           {/* navbar */}

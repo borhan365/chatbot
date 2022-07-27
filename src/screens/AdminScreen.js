@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import { Link } from 'react-router-dom'
 import logo from '../assets/images/wipdata-logo.png'
 import {AiOutlineUser} from 'react-icons/ai'
@@ -15,6 +15,25 @@ import {BiAddToQueue} from 'react-icons/bi'
 import {FiSearch} from 'react-icons/fi'
 
 function AdminScreen() {
+
+  const [width, setWidth] = useState(window.innerWidth);
+  const [showChat, setShowChat] = useState(false);
+
+    function handleWindowSizeChange() {
+        setWidth(window.innerWidth);
+    }
+    useEffect(() => {
+        window.addEventListener('resize', handleWindowSizeChange);
+        return () => {
+            window.removeEventListener('resize', handleWindowSizeChange);
+        }
+    }, []);
+
+    const isMobile = width <= 768;
+
+    console.log(isMobile)
+    console.log("chat show" + showChat)
+
   return (
     <>
       <div className='admin-page-wrapper'>
@@ -127,6 +146,200 @@ function AdminScreen() {
                 <ul className='recent-chat-wrap'>
 
                   {/* item */}
+                  <li className='recent-chat-item' onClick={() => setShowChat(!showChat) }>
+                    <Link to="/admin">
+                      <div className='recent-chat-item-content'>
+                        {/* thumb */}
+                        <div className='featured-chat-thumb'>
+                          <img src={peopleTwo} alt="chat one" />
+                          <div className="online-status"></div>
+                        </div>
+                        {/* content */}
+                        <div className='recent-chatbox-content'>
+                          <h2>Patrick Hendricks</h2>
+                          <div className='recent-chatbox-user-chat'>
+                            <BsImage /> 
+                            <span>images</span>
+                          </div>
+                        </div>
+                      </div>
+                      <p>02:50</p>
+                    </Link>
+                  </li>
+
+                  {/* item */}
+                  <li className='recent-chat-item'>
+                    <Link to="/admin">
+                      <div className='recent-chat-item-content'>
+                        {/* thumb */}
+                        <div className='featured-chat-thumb'>
+                          <img src={peopleOne} alt="chat one" />
+                          <div className="online-status"></div>
+                        </div>
+                        {/* content */}
+                        <div className='recent-chatbox-content'>
+                          <h2>Mirta George</h2>
+                          <p>Your service is awesome. </p>
+                        </div>
+                      </div>
+                      <p>02:50</p>
+                    </Link>
+                  </li>
+
+                  {/* item */}
+                  <li className='recent-chat-item active'>
+                    <Link to="/admin">
+                      <div className='recent-chat-item-content'>
+                        {/* thumb */}
+                        <div className='featured-chat-thumb'>
+                          <img src={peopleFour} alt="chat one" />
+                          <div className="online-status"></div>
+                        </div>
+                        {/* content */}
+                        <div className='recent-chatbox-content'>
+                          <h2>Albert Rodarte</h2>
+                          <p className='typing-in-chat'>typing <span class="animate-typing"><span class="dot ms-1"></span><span class="dot ms-1"></span><span class="dot ms-1"></span></span></p>
+                        </div>
+                      </div>
+                      <p>02:50</p>
+                    </Link>
+                  </li>
+
+                  {/* item */}
+                  <li className='recent-chat-item'>
+                    <Link to="/admin">
+                      <div className='recent-chat-item-content'>
+                        {/* thumb */}
+                        <div className='featured-chat-thumb'>
+                          <img src={peopleThree} alt="chat one" />
+                          <div className="online-status"></div>
+                        </div>
+                        {/* content */}
+                        <div className='recent-chatbox-content'>
+                          <h2>Designer</h2>
+                          <p>Please call me immidiately</p>
+                        </div>
+                      </div>
+                      <p>02:50</p>
+                    </Link>
+                  </li>
+
+                  {/* item */}
+                  <li className='recent-chat-item'>
+                    <Link to="/admin">
+                      <div className='recent-chat-item-content'>
+                        {/* thumb */}
+                        <div className='featured-chat-thumb'>
+                          <img src={peopleFive} alt="chat one" />
+                          <div className="online-status"></div>
+                        </div>
+                        {/* content */}
+                        <div className='recent-chatbox-content'>
+                          <h2>Doris Brown</h2>
+                          <p>👍</p>
+                        </div>
+                      </div>
+                      <p>02:50</p>
+                    </Link>
+                  </li>
+                  {/* item */}
+                  <li className='recent-chat-item'>
+                    <Link to="/admin">
+                      <div className='recent-chat-item-content'>
+                        {/* thumb */}
+                        <div className='featured-chat-thumb'>
+                          <img src={peopleTwo} alt="chat one" />
+                          <div className="online-status"></div>
+                        </div>
+                        {/* content */}
+                        <div className='recent-chatbox-content'>
+                          <h2>Patrick Hendricks</h2>
+                          <div className='recent-chatbox-user-chat'>
+                            <BsImage /> 
+                            <span>images</span>
+                          </div>
+                        </div>
+                      </div>
+                      <p>02:50</p>
+                    </Link>
+                  </li>
+
+                  {/* item */}
+                  <li className='recent-chat-item'>
+                    <Link to="/admin">
+                      <div className='recent-chat-item-content'>
+                        {/* thumb */}
+                        <div className='featured-chat-thumb'>
+                          <img src={peopleOne} alt="chat one" />
+                          <div className="online-status"></div>
+                        </div>
+                        {/* content */}
+                        <div className='recent-chatbox-content'>
+                          <h2>Mirta George</h2>
+                          <p>Your service is awesome. </p>
+                        </div>
+                      </div>
+                      <p>02:50</p>
+                    </Link>
+                  </li>
+
+                  {/* item */}
+                  <li className='recent-chat-item active'>
+                    <Link to="/admin">
+                      <div className='recent-chat-item-content'>
+                        {/* thumb */}
+                        <div className='featured-chat-thumb'>
+                          <img src={peopleFour} alt="chat one" />
+                          <div className="online-status"></div>
+                        </div>
+                        {/* content */}
+                        <div className='recent-chatbox-content'>
+                          <h2>Albert Rodarte</h2>
+                          <p className='typing-in-chat'>typing <span class="animate-typing"><span class="dot ms-1"></span><span class="dot ms-1"></span><span class="dot ms-1"></span></span></p>
+                        </div>
+                      </div>
+                      <p>02:50</p>
+                    </Link>
+                  </li>
+
+                  {/* item */}
+                  <li className='recent-chat-item'>
+                    <Link to="/admin">
+                      <div className='recent-chat-item-content'>
+                        {/* thumb */}
+                        <div className='featured-chat-thumb'>
+                          <img src={peopleThree} alt="chat one" />
+                          <div className="online-status"></div>
+                        </div>
+                        {/* content */}
+                        <div className='recent-chatbox-content'>
+                          <h2>Designer</h2>
+                          <p>Please call me immidiately</p>
+                        </div>
+                      </div>
+                      <p>02:50</p>
+                    </Link>
+                  </li>
+
+                  {/* item */}
+                  <li className='recent-chat-item'>
+                    <Link to="/admin">
+                      <div className='recent-chat-item-content'>
+                        {/* thumb */}
+                        <div className='featured-chat-thumb'>
+                          <img src={peopleFive} alt="chat one" />
+                          <div className="online-status"></div>
+                        </div>
+                        {/* content */}
+                        <div className='recent-chatbox-content'>
+                          <h2>Doris Brown</h2>
+                          <p>👍</p>
+                        </div>
+                      </div>
+                      <p>02:50</p>
+                    </Link>
+                  </li>
+                  {/* item */}
                   <li className='recent-chat-item'>
                     <Link to="/admin">
                       <div className='recent-chat-item-content'>
@@ -230,7 +443,7 @@ function AdminScreen() {
           </div>
 
           {/* message body */}
-          <div className='chat-message-body'>
+          <div className={showChat ? 'chat-message-body chatbox-message-body active' : 'chat-message-body chatbox-message-body'}>
             <AdminMessageBody />
           </div>
         </div>

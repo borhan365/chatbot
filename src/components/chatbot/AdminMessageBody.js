@@ -76,7 +76,7 @@ function AdminMessageBody() {
                   </div>
 
                   {/* agent details */}
-                  <div className="chatbot-widget-recipient-details">
+                  <div className="chatbot-widget-recipient-details chatbox-recipient-details">
                     <p>Chat with</p>
                     <h3>Jassica Smith</h3>
                   </div>

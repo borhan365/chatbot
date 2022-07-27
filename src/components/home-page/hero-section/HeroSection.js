@@ -3,6 +3,10 @@ import FeaturedThumb from '../../../assets/images/bg/hero-one.png'
 import bigRobot from '../../../assets/images/bg/big-robot.png'
 import bigRobotTwo from '../../../assets/images/bg/big-robot-two.png'
 import chatting from '../../../assets/images/bg/chatting.png'
+import shapeOne from "../../../assets/images/bg/one.png"
+import shapeTwo from "../../../assets/images/bg/two.png"
+import shapeThree from "../../../assets/images/bg/three.png"
+import shapeFour from "../../../assets/images/bg/four.png"
 
 function HeroSection() {
   return (
@@ -35,6 +39,12 @@ function HeroSection() {
               </div>
             </div>
             <div className='hero-col-6 hero-thumb'>
+              <div className='shapes'>
+              <img className='' src={shapeOne} alt="shape one" />
+              <img src={shapeTwo} alt="shape two" />
+              <img src={shapeThree} alt="shape three" />
+              <img src={shapeFour} alt="shape four" />
+              </div>
               <img src={chatting} alt="robot" />
             </div>
           </div>
