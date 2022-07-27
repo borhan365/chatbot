@@ -1,8 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { AiOutlineDelete, AiOutlineUser } from 'react-icons/ai'
 import { BiVolumeMute } from 'react-icons/bi'
-import { BsCameraVideo, BsFillEmojiSmileFill, BsXLg } from 'react-icons/bs'
-import { FaTelegramPlane } from 'react-icons/fa'
+import { BsCameraVideo, BsFillCameraVideoFill, BsFillEmojiSmileFill, BsXLg } from 'react-icons/bs'
+import { FaTelegramPlane, FaTimes, FaVideo } from 'react-icons/fa'
 import { HiPlus } from 'react-icons/hi'
 import { MdAttachFile, MdCall, MdVideoCall } from 'react-icons/md'
 import { VscArchive } from 'react-icons/vsc'
@@ -29,6 +29,30 @@ function AdminMessageBody() {
   const [searchToggle, setSearchToggle] = useState(false);
   const [menuToggle, setMenuToggle] = useState(false);
   const [whichIcon, setWhichIcon] = useState('');
+  const [sticky, setSticky] = useState(window.scrollY); 
+  const [bodyClick, setBodyClick] = useState(window);
+
+  const windowBodyClick = () => {
+    setBodyClick(window)
+  }
+
+  useEffect(() => {
+    window.addEventListener('click', windowBodyClick)
+    return () => window.removeEventListener('click', windowBodyClick)
+  }, [])
+
+  console.log(bodyClick)
+
+  const stickyChatHeader = () => {
+    setSticky(window.scrollY)
+  }
+
+  useEffect(() => {
+    window.addEventListener('scroll', stickyChatHeader)
+    return () => window.removeEventListener('scroll', stickyChatHeader)
+  }, [])
+
+  const isScrolled = sticky >= 0
 
   const searchRef = useRef(null);
 
@@ -62,10 +86,10 @@ function AdminMessageBody() {
             {/* user actions */}
             <div className='call-user-actions'>
               <div className='call-user-icon' onClick={callModel}>
-                <BsXLg />
+                <FaTimes />
               </div>
               <div className='call-user-icon'>
-              {whichIcon=="audio"&&<MdCall /> || whichIcon=="video" && <MdVideoCall />}
+              {whichIcon=="audio"&&<MdCall /> || whichIcon=="video" && <FaVideo />}
               {}
               </div>
             </div>
@@ -76,7 +100,7 @@ function AdminMessageBody() {
           <div className="chatbox">
             
             {/* chat header */}
-            <div className="chatbot-widget-header chatbox-header">
+            <div className={isScrolled ? "chatbot-widget-header chatbox-header active" : "chatbot-widget-header chatbox-header"}>
 
               {/* agent presence */}
               <div className="chatbot-widget-agent-precence">
@@ -149,12 +173,12 @@ function AdminMessageBody() {
                       <BsCameraVideo />
                     </div>
 
-                    <div className='chatbox-header-icon'>
-                      <AiOutlineUser />
-                    </div>
-
                     <div className='chatbox-header-icon' onClick={() => setMenuToggle(!menuToggle)}>
                       { !menuToggle ? <FiMoreVertical /> : <img src={x} alt="cancle" /> } 
+                    </div>
+
+                    <div className='chatbox-header-icon desktop-hide'>
+                      <BsXLg />
                     </div>
 
                   </div>

@@ -143,6 +143,7 @@
   }
   .chatbox-conversation ul.message-body {
     padding-bottom: 0px !important;
+    margin-top: 80px;
   }
   .chat-conversation-wrapper {
     padding: 0px 28px;
@@ -166,7 +167,8 @@
     width: 100%;
   }
   .call-model-wrapper{
-    height: 285px;
+    height: 270px;
+    grid-gap: 14px;
   }
   .section-title{
     margin-bottom: 40px;
@@ -272,6 +274,12 @@
     display: block;
     position: absolute;
     inset: 0;
+    background: white;
+  }
+  .chatbox-header.active {
+    position: fixed;
+    width: 100%;
+    z-index: 999;
     background: white;
   }
   .chatbox-header-right-options {

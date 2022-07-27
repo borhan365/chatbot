@@ -237,6 +237,7 @@ button.message-visitor-email-button {
   box-shadow: 6px -2px 5px 0px grey;
   position: relative;
   border-bottom: 1px solid #d3d3d329;
+  transition: all 0.3s ease-in-out;
 }
 .chatbox-header p,
 .chatbox-header h3 {
@@ -1425,13 +1426,10 @@ input:focus + svg {
 }
 .call-user-icon svg {
   color: white;
-  font-size: 20px;
+  font-size: 23px;
 }
 .call-user-icon:first-child {
   background: red;
-}
-.call-user-icon svg:first-child {
-  font-size: 17px;
 }
 /* search modal */
 .search-model {

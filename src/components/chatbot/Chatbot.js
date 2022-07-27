@@ -64,6 +64,8 @@ function Chatbot() {
     audio.play()
   }
 
+  const handleSubmit = (e) => e.preventDefault(); 
+
   return (
     <>
       <section className='chatbot-section'>
@@ -73,7 +75,7 @@ function Chatbot() {
           <div className={toggle ? "chatbot-widget active" : "chatbot-widget"}>
 
             {/* user contact form */}
-            <form className={!formToggle ? "chatbot-user-form active" : "chatbot-user-form"}>
+            <form onSubmit={handleSubmit} className={!formToggle ? "chatbot-user-form active" : "chatbot-user-form"}>
               <div className='chatbot-notices'>
                 <p>We are here to answer any pre-purchase inquiries! For post-purchase support, please submit a support ticket by visiting https://support.wipdata.com.</p>
                 <BsXLg onClick={() => setFormToggle(!formToggle)} className='close-user-register-form'/>
@@ -97,7 +99,7 @@ function Chatbot() {
                   <label>Full name</label>
                   <textarea className='input-control-textarea' placeholder='Descriptions'></textarea>
                 </div>
-                <button className='chatbot-user-form-submit-button'>Submit</button>
+                <button onClick={() => setFormToggle(!formToggle)} className='chatbot-user-form-submit-button'>Submit</button>
               </div>
             </form>
             

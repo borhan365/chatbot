@@ -84,6 +84,117 @@ function MessageProduct() {
             <button className='chat-product-order-button'>Order Now</button>
         </div>
         </SwiperSlide>
+
+        {/* item */}
+        <SwiperSlide>
+          <div className="chat-product-carousel-item">
+            {/* thumb */}
+            <div className="chat-product-carousel-thumb">
+              <img src={productOne} alt="product one" />
+            </div>
+            {/* content */}
+            <div className="chat-product-details">
+                <a href="#">
+                  <h2>Healthy Breakfast Egg</h2>
+              </a>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis </p>
+            </div>
+              <button className='chat-product-order-button'>Order Now</button>
+          </div>
+        </SwiperSlide>
+
+        {/* item */}
+        <SwiperSlide>
+        {/* item */}
+        <div className="chat-product-carousel-item">
+          {/* thumb */}
+          <div className="chat-product-carousel-thumb">
+            <img src={productTwo} alt="product one" />
+          </div>
+          {/* content */}
+          <div className="chat-product-details">
+            <a href="#">
+              <h2>Salad With Chicken</h2>
+            </a>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis </p>
+          </div>
+            <button className='chat-product-order-button'>Order Now</button>
+        </div>
+        </SwiperSlide>
+
+        {/* item */}
+        <SwiperSlide>
+        <div className="chat-product-carousel-item">
+          {/* thumb */}
+          <div className="chat-product-carousel-thumb">
+            <img src={productOne} alt="product one" />
+          </div>
+          {/* content */}
+          <div className="chat-product-details">
+            <a href="#">
+              <h2>Grille With Butter</h2>
+            </a>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis </p>
+          </div>
+            <button className='chat-product-order-button'>Order Now</button>
+        </div>
+        </SwiperSlide>
+
+        {/* item */}
+        <SwiperSlide>
+          <div className="chat-product-carousel-item">
+            {/* thumb */}
+            <div className="chat-product-carousel-thumb">
+              <img src={productOne} alt="product one" />
+            </div>
+            {/* content */}
+            <div className="chat-product-details">
+                <a href="#">
+                  <h2>Healthy Breakfast Egg</h2>
+              </a>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis </p>
+            </div>
+              <button className='chat-product-order-button'>Order Now</button>
+          </div>
+        </SwiperSlide>
+
+        {/* item */}
+        <SwiperSlide>
+        {/* item */}
+        <div className="chat-product-carousel-item">
+          {/* thumb */}
+          <div className="chat-product-carousel-thumb">
+            <img src={productTwo} alt="product one" />
+          </div>
+          {/* content */}
+          <div className="chat-product-details">
+            <a href="#">
+              <h2>Salad With Chicken</h2>
+            </a>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis </p>
+          </div>
+            <button className='chat-product-order-button'>Order Now</button>
+        </div>
+        </SwiperSlide>
+
+        {/* item */}
+        <SwiperSlide>
+        <div className="chat-product-carousel-item">
+          {/* thumb */}
+          <div className="chat-product-carousel-thumb">
+            <img src={productOne} alt="product one" />
+          </div>
+          {/* content */}
+          <div className="chat-product-details">
+            <a href="#">
+              <h2>Grille With Butter</h2>
+            </a>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis </p>
+          </div>
+            <button className='chat-product-order-button'>Order Now</button>
+        </div>
+        </SwiperSlide>
+
         </Swiper>
         </div>
     </>
