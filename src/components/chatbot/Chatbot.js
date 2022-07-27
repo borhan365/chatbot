@@ -17,6 +17,13 @@ import logo from '../../assets/images/wipdata-logo.png'
 import x from '../../assets/images/icons/x.png'
 import MessageProduct from '../../components/MessageProduct'
 
+import useIcon from '../../assets/images/icons/use.png'
+import chatbotIcon from '../../assets/images/icons/robot.png'
+import installIcon from '../../assets/images/icons/install.png'
+import settingIcon from '../../assets/images/icons/setting.png'
+import billingIcon from '../../assets/images/icons/billing.png'
+import helpIcon from '../../assets/images/icons/book.png'
+
 function Chatbot() {
 
   let audio = new Audio("/message.mp3")
@@ -163,6 +170,46 @@ function Chatbot() {
                   <img src={bot} alt="bot" />
                 </li>
                 {/* <div class="messageTimestamp fade-enter-done">Yesterday, 20:00</div> */}
+
+                <li className='message-bubble-agent'>
+                  <span>Before we begin, please choose one of the topics. What would you like to explore?</span>
+                </li>
+                
+                {/* buttons  */}
+                <li className='message-bubble-agent clear-style-message'>
+                  <div className="message-auto-suggest-buttons">
+                    {/* item */}
+                    <button className='suggest-btn'>
+                      <img src={helpIcon} alt="📚" />
+                      <span>Help Center</span>
+                    </button>
+                    {/* item */}
+                    <button className='suggest-btn'>
+                      <img src={billingIcon} alt="💰" />
+                      <span>Billing</span>
+                    </button>
+                    {/* item */}
+                    <button className='suggest-btn'>
+                      <img src={installIcon} alt="💻" />
+                      <span>Installations</span>
+                    </button>
+                    {/* item */}
+                    <button className='suggest-btn'>
+                      <img src={chatbotIcon} alt="🤖" />
+                      <span>Chatbots</span>
+                    </button>
+                    {/* item */}
+                    <button className='suggest-btn'>
+                      <img src={useIcon} alt="👨‍💻" />
+                      <span>Using WipBot</span>
+                    </button>
+                    {/* item */}
+                    <button className='suggest-btn'>
+                      <img src={settingIcon} alt="⚙️" />
+                      <span>Settings</span>
+                    </button>
+                  </div>
+                </li>
 
 
                 {/* message by visitor */}

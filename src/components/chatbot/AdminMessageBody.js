@@ -17,6 +17,13 @@ import x from '../../assets/images/icons/x.png'
 import { FiMoreVertical, FiPhoneCall, FiSearch } from 'react-icons/fi'
 import happyChat from '../../assets/images/peoples/happy-chat.jpg'
 
+import useIcon from '../../assets/images/icons/use.png'
+import chatbotIcon from '../../assets/images/icons/robot.png'
+import installIcon from '../../assets/images/icons/install.png'
+import settingIcon from '../../assets/images/icons/setting.png'
+import billingIcon from '../../assets/images/icons/billing.png'
+import helpIcon from '../../assets/images/icons/book.png'
+
 function AdminMessageBody() {
   
   const [callToggle, setCallToggle] = useState(true);
@@ -88,7 +95,8 @@ function AdminMessageBody() {
                   {/* visibility hidden */}
                   {/* search */}
                   <div className={searchToggle ? 'search-model active' : 'search-model'}>
-                    <input placeholder='Search here' />
+                    <input placeholder='Search here...' />
+                    <FiSearch className='search-model-search-icon' />
                     <BsXLg onClick={() => setSearchToggle(!searchToggle)} />
                   </div>
 
@@ -111,7 +119,7 @@ function AdminMessageBody() {
                   </div>
 
                   {/* chatbot credit */}
-                  <div className='chatbot-creator'>
+                  <div className='chatbot-creator chatbox-creator'>
                     <p>Powered by</p>
                     <a href="https://www.wipdata.com/" target="_blank" rel="noreferrer">
                       <img src={logo} alt="site logo" />
@@ -156,7 +164,47 @@ function AdminMessageBody() {
                   <span>Hi, I'm WipData Chatbot</span>
                   <img src={bot} alt="bot" />
                 </li>
-                <div class="messageTimestamp fade-enter-done">Yesterday, 20:00</div>
+                {/* <div class="messageTimestamp fade-enter-done">Yesterday, 20:00</div> */}
+                
+                <li className='message-bubble-agent'>
+                  <span>Before we begin, please choose one of the topics. What would you like to explore?</span>
+                </li>
+
+                {/* buttons  */}
+                <li className='message-bubble-agent clear-style-message'>
+                  <div className="message-auto-suggest-buttons">
+                    {/* item */}
+                    <button className='suggest-btn'>
+                      <img src={helpIcon} alt="📚" />
+                      <span>Help Center</span>
+                    </button>
+                    {/* item */}
+                    <button className='suggest-btn'>
+                      <img src={billingIcon} alt="💰" />
+                      <span>Billing</span>
+                    </button>
+                    {/* item */}
+                    <button className='suggest-btn'>
+                      <img src={installIcon} alt="💻" />
+                      <span>Installations</span>
+                    </button>
+                    {/* item */}
+                    <button className='suggest-btn'>
+                      <img src={chatbotIcon} alt="🤖" />
+                      <span>Chatbots</span>
+                    </button>
+                    {/* item */}
+                    <button className='suggest-btn'>
+                      <img src={useIcon} alt="👨‍💻" />
+                      <span>Using WipBot</span>
+                    </button>
+                    {/* item */}
+                    <button className='suggest-btn'>
+                      <img src={settingIcon} alt="⚙️" />
+                      <span>Settings</span>
+                    </button>
+                  </div>
+                </li>
 
 
                 {/* message by visitor */}

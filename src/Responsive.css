@@ -2,11 +2,54 @@
 /* Medium devices (landscape tablets, 768px and down) */
 @media only screen and (max-width: 768px) {
   .container {
-    max-width: 96%;
+    max-width: 94%;
     margin: 0px auto;
   }
   nav {
-    display: none;
+    /* display: none; */
+    position: fixed;
+    left: -100px;
+    background: white;
+    height: 100%;
+    z-index: 9999;
+    width: 65%;
+    top: 0px;
+    box-shadow: 0px 0px 4px 0px lightgray;
+    transition: all 0.3s ease-in-out;
+    visibility: hidden;
+    opacity: 0;
+  }
+  nav.active {
+    visibility: visible;
+    opacity: 1;
+    left: 0px;
+  }
+  nav ul.navbar-wrappper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    grid-gap: unset;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  nav ul.navbar-wrappper li {
+    transition: all 0.3s ease-in-out;
+    border-bottom: 1px solid #d3d3d347;
+    width: 100%;
+    padding: 10px 20px;
+  }
+  nav ul.navbar-wrappper li:last-child {
+    border-bottom: unset;
+  }
+  svg.cross-mobile-navbar {
+    position: absolute;
+    right: 30px;
+    color: var(--orangeColor);
+    top: 15px;
+    cursor: pointer;
+  }
+  li.admin-dashboard-li{
+    margin-top: 10px;
   }
   .hero-row{
     flex-direction: column;
@@ -33,6 +76,7 @@
   }
   .what-we-offer-wrapper{
     flex-direction: column;
+    grid-gap: 15px;
   }
   .footer-wrapper{
     flex-direction: column;
@@ -50,6 +94,88 @@
     font-size: 30px;
     margin: 20px 0px;
   }
+  .search-model{
+    right: 0px;
+  }
+  .search-model input {
+    border: unset;
+    background: #fff;
+    border-radius: 8px;
+    padding: 20px 10px;
+    width: 375px;
+    font-family: poppins;
+    font-size: 14px;
+    padding-right: 35px;
+    padding-left: 35px;
+    outline: none;
+    border: unset;
+  }
+  .call-user-avatar {
+    width: 80px;
+    height: 80px;
+  }
+  .call-model-container{
+    padding: 20px;
+  }
+  .call-user-icon:first-child {
+    background: var(--orangeColor);
+  }
+  .hero-content-wrap p {
+    font-size: 17px;
+  }
+  .chatbot-widget-wrapper {
+    position: fixed;
+    right: 0px;
+    bottom: 0px;
+    width: 100%;
+    height: 100%;
+  }
+  .chatbot-widget.active {
+    height: 100vh;
+    width: 100%;
+    border-radius: 0px;
+  }
+  ul.message-body {
+    padding-bottom: 160px;
+  }
+  .chatbox-conversation ul.message-body {
+    padding-bottom: 0px !important;
+  }
+  .chat-conversation-wrapper {
+    padding: 0px 28px;
+    width: 100%;
+    height: 100%;
+    max-height: 100%;
+    min-height: 100%;
+  }
+  .chatbot-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px;
+    height: 70px;
+    grid-gap: 10px;
+    box-shadow: var(--brand-shadow);
+    position: fixed;
+    bottom: 0px;
+    background: white;
+    z-index: 99;
+  }
+  .call-model-wrapper{
+    height: 285px;
+  }
+  .section-title{
+    margin-bottom: 40px;
+  }
+  .single-features-item {
+    box-shadow: 1px 2px 3px 0px #0707071c;
+  }
+  .what-we-do-item {
+    min-height: 270px;
+  }
+  .what-we-offer-item {
+    min-height: 265px;
+  }
 
   /* chatbot */
   /* .chatbot-widget-wrapper {
@@ -61,6 +187,9 @@
   .chatbot-icon {
     width: 50px;
     height: 50px;
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
   }
   .chatbot-icon svg {
     font-size: 23px;
@@ -108,6 +237,7 @@
     background: white;
     padding: 10px;
     box-shadow: 0px 0px 5px 0px lightgray;
+    height: 60px;
   }
   .recent-chat{
     height: unset;
@@ -145,7 +275,7 @@
   .chatbox-header-icon svg {
     font-size: 18px;
   }
-  .chatbot-creator p {
+  .chatbox-creator p {
     font-size: 10px;
     color: gray;
   }
@@ -155,6 +285,26 @@
   }
   .mobile-header-burger-menu img {
     width: 30px;
+    cursor: pointer;
+  }
+  .shapes img:nth-child(3){
+    display: none;
+  }
+  section.featured-section {
+    padding: 40px 0px;
+  }
+  ul.overview-list {
+    grid-gap: 10px;
+  }
+  section.what-we-do-section {
+    padding: 40px 0px;
+  }
+  section.what-we-offer-section {
+    padding: 50px 0px;
+  }
+  .overview-list li {
+    grid-gap: 9px;
+    font-size: 17px;
   }
   header {
     grid-gap: 8px;

@@ -63,8 +63,8 @@ function LoginScreen() {
                 <h2><span className='orangered'>Wip</span> Data</h2>
               </div>
 
-              <h2 className='login-title'>Hello Everyone , We are Chitchat</h2>
-              <p>Welcome to chitchat please login to your account.</p>
+              <h2 className='login-title'>Hello Everyone , We are WipData</h2>
+              <p>Welcome to WipData please login to your account.</p>
 
               {/* email */}
               <div className='input-group'>
