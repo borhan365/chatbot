@@ -141,7 +141,7 @@ function AdminScreen() {
                 <ul className='recent-chat-wrap'>
 
                   {/* item */}
-                  <li className='recent-chat-item' onClick={() => setShowChat(!showChat) }>
+                  <li className='recent-chat-item' onClick={() => setShowChat(!showChat)}>
                     <Link to="/admin">
                       <div className='recent-chat-item-content'>
                         {/* thumb */}
@@ -163,7 +163,7 @@ function AdminScreen() {
                   </li>
 
                   {/* item */}
-                  <li className='recent-chat-item'>
+                  <li className='recent-chat-item' onClick={() => setShowChat(!showChat)}>
                     <Link to="/admin">
                       <div className='recent-chat-item-content'>
                         {/* thumb */}
@@ -201,7 +201,7 @@ function AdminScreen() {
                   </li>
 
                   {/* item */}
-                  <li className='recent-chat-item'>
+                  <li className='recent-chat-item' onClick={() => setShowChat(!showChat)}>
                     <Link to="/admin">
                       <div className='recent-chat-item-content'>
                         {/* thumb */}
@@ -220,7 +220,7 @@ function AdminScreen() {
                   </li>
 
                   {/* item */}
-                  <li className='recent-chat-item'>
+                  <li className='recent-chat-item' onClick={() => setShowChat(!showChat)}>
                     <Link to="/admin">
                       <div className='recent-chat-item-content'>
                         {/* thumb */}
@@ -238,7 +238,7 @@ function AdminScreen() {
                     </Link>
                   </li>
                   {/* item */}
-                  <li className='recent-chat-item'>
+                  <li className='recent-chat-item' onClick={() => setShowChat(!showChat)}>
                     <Link to="/admin">
                       <div className='recent-chat-item-content'>
                         {/* thumb */}
@@ -260,7 +260,7 @@ function AdminScreen() {
                   </li>
 
                   {/* item */}
-                  <li className='recent-chat-item'>
+                  <li className='recent-chat-item' onClick={() => setShowChat(!showChat)}>
                     <Link to="/admin">
                       <div className='recent-chat-item-content'>
                         {/* thumb */}
@@ -298,7 +298,7 @@ function AdminScreen() {
                   </li>
 
                   {/* item */}
-                  <li className='recent-chat-item'>
+                  <li className='recent-chat-item' onClick={() => setShowChat(!showChat)}>
                     <Link to="/admin">
                       <div className='recent-chat-item-content'>
                         {/* thumb */}
@@ -317,7 +317,7 @@ function AdminScreen() {
                   </li>
 
                   {/* item */}
-                  <li className='recent-chat-item'>
+                  <li className='recent-chat-item' onClick={() => setShowChat(!showChat)}>
                     <Link to="/admin">
                       <div className='recent-chat-item-content'>
                         {/* thumb */}
@@ -335,7 +335,7 @@ function AdminScreen() {
                     </Link>
                   </li>
                   {/* item */}
-                  <li className='recent-chat-item'>
+                  <li className='recent-chat-item' onClick={() => setShowChat(!showChat)}>
                     <Link to="/admin">
                       <div className='recent-chat-item-content'>
                         {/* thumb */}
@@ -357,7 +357,7 @@ function AdminScreen() {
                   </li>
 
                   {/* item */}
-                  <li className='recent-chat-item'>
+                  <li className='recent-chat-item' onClick={() => setShowChat(!showChat)}>
                     <Link to="/admin">
                       <div className='recent-chat-item-content'>
                         {/* thumb */}
@@ -395,7 +395,7 @@ function AdminScreen() {
                   </li>
 
                   {/* item */}
-                  <li className='recent-chat-item'>
+                  <li className='recent-chat-item' onClick={() => setShowChat(!showChat)}>
                     <Link to="/admin">
                       <div className='recent-chat-item-content'>
                         {/* thumb */}
@@ -414,7 +414,7 @@ function AdminScreen() {
                   </li>
 
                   {/* item */}
-                  <li className='recent-chat-item'>
+                  <li className='recent-chat-item' onClick={() => setShowChat(!showChat)}>
                     <Link to="/admin">
                       <div className='recent-chat-item-content'>
                         {/* thumb */}

@@ -340,6 +340,42 @@
     max-width: 95%;
     margin: auto;
   }
+  .app-progress-wrapper {
+    grid-gap: 34px;
+    flex-direction: column;
+  }
+  .app-progress-content p {
+    font-size: 16px;
+  }
+  .app-progress-section {
+    padding: 30px 0px;
+  }
+  .partner-wrapper {
+    grid-gap: 10px;
+    overflow-y: scroll;
+  }
+  .partner-item {
+    width: 153px;
+  }
+  .partner-item img {
+    width: unset;
+  }
+  .partner-section {
+    padding: 10px 0px;
+  }
+  button.app-progress-button {
+    padding: 13px 21px;
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 8px;
+    box-shadow: rgba(0, 0, 0, 0.21) 0px 1px 5px 0px;
+  }
+  button.hero-service-button, button.hero-contact-button {
+    height: 45px;
+    padding: 0px 17px;
+    border-radius: 30px;
+    font-size: 17px;
+  }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */

@@ -10,6 +10,8 @@ import FeaturedSection from '../components/home-page/featured-section/FeaturedSe
 import GoalSection from '../components/home-page/GoalSection';
 import WhatWeDoSection from '../components/home-page/WhatWeDoSection';
 import WhatWeOffer from '../components/home-page/WhatWeOffer';
+import AppProgressSection from '../components/home-page/AppProgressSection'
+import PartnerSection from '../components/home-page/PartnerSection'
 
 
 function HomeScreen() {
@@ -28,7 +30,9 @@ function HomeScreen() {
         <FeaturedSection />
         <GoalSection />
         <WhatWeDoSection />
+        <AppProgressSection />
         <WhatWeOffer />
+        <PartnerSection />
       <Footer />
     </>
   )
