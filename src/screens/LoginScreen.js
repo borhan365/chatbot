@@ -64,7 +64,7 @@ function LoginScreen() {
 
               {/* email */}
               <div className='input-group'>
-              <input className={errors?.email?.message && "required"} name='email' type="email" placeholder='Email address' {...register('email', { required: "Email is required!" })} />
+              <input className={errors?.email?.message && "required"} name='email' required={true} type="email" placeholder='Email address' {...register('email', { required: "Email is required!" })} />
                 <MdEmail className={errors?.email?.message && "required-icon"} />
                 <span>Note: Enter any email address <span className='required-star'>*</span></span>
               </div>
