@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom'
 // images
 import bg from '../../assets/images/bg/bg.png'
 import logo from '../../assets/images/wipdata-logo.png'
+import SocialMedia from '../SocialMedia'
 
 function index() {
   return (
@@ -38,20 +39,7 @@ function index() {
 
             {/* social media */}
             <div className="footer-item-social">
-              <ul>
-                <li>
-                  <Link to="#"> <BsFacebook /> </Link>
-                </li>
-                <li>
-                  <Link to="#"> <BsTwitter /> </Link>
-                </li>
-                <li>
-                  <Link to="#"> <BsLinkedin /> </Link>
-                </li>
-                <li>
-                  <Link to="#"> <BsYoutube /> </Link>
-                </li>
-              </ul>
+              <SocialMedia />
             </div>
           </div>
 

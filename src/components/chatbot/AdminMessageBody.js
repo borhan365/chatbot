@@ -41,8 +41,6 @@ function AdminMessageBody() {
     return () => window.removeEventListener('click', windowBodyClick)
   }, [])
 
-  console.log(bodyClick)
-
   const stickyChatHeader = () => {
     setSticky(window.scrollY)
   }
@@ -55,6 +53,7 @@ function AdminMessageBody() {
   const isScrolled = sticky >= 0
 
   const searchRef = useRef(null);
+  const chatRef = useRef(null); 
 
   useEffect(() => {
     if (searchRef.current) {
@@ -188,7 +187,7 @@ function AdminMessageBody() {
 
             {/* chat conversation group body */}
             <div className="chat-conversation-wrapper chatbox-conversation">
-              <ul className='message-body'>
+              <ul ref={chatRef} className='message-body'>
 
                 {/* plain text bubble */}
                 <li className='message-bubble-agent'>

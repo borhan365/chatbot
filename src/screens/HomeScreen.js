@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import Header from '../components/header/Header'
 import Footer from '../components/footer'
 
@@ -16,11 +16,18 @@ import PartnerSection from '../components/home-page/PartnerSection'
 
 function HomeScreen() {
 
+  const scrollRef = useRef(null);
+
   const [toggle, setToggle] = useState(false); 
 
   const handleToggle = (e) => {
     setToggle(!toggle);
   }
+
+  useEffect(() => {
+    scrollRef?.current?.scrollIntoView()
+    console.log(scrollRef?.current?.scrollIntoView())
+  }, [])
 
   return (
     <>

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 import { AiOutlineUser } from 'react-icons/ai'
 import { BsBookmarks, BsBox, BsBrightnessHigh, BsBug, BsChatLeftQuote, BsFolder2Open, BsImage, BsPlusCircle } from 'react-icons/bs'
 import { FiSearch } from 'react-icons/fi'
@@ -12,6 +12,12 @@ import logo from '../assets/images/wipdata-logo.png'
 import AdminMessageBody from '../components/chatbot/AdminMessageBody'
 
 function AdminScreen() {
+
+  const inputRef = useRef(null);
+
+  useEffect(() => {
+    inputRef.current.focus();
+  }, [])
 
   const [width, setWidth] = useState(window.innerWidth);
   const [showChat, setShowChat] = useState(false);
@@ -62,7 +68,7 @@ function AdminScreen() {
 
               {/* search */}
               <div className='chat-body-search'>
-                <input placeholder='Search messages or users' />
+                <input ref={inputRef} placeholder='Search messages or users' />
                 <FiSearch />
               </div>
 
