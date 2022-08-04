@@ -4,8 +4,14 @@ import DashboardScreen from './screens/DashboardScreen';
 import HomeScreen from './screens/HomeScreen';
 import LoginScreen from './screens/LoginScreen';
 import ProductScreen from './screens/ProductScreen';
+import PricingScreen from './screens/PricingScreen';
 
 function App() {
+
+  const isUser = localStorage.getItem('userInfo')
+
+  console.log(isUser)
+
   return (
     <BrowserRouter>
       <Routes>
@@ -14,6 +20,7 @@ function App() {
         <Route path="/admin" element={<AdminScreen />} />
         <Route path="/dashboard" element={<DashboardScreen />} />
         <Route path="/product" element={<ProductScreen />} />
+        <Route path="/pricing" element={<PricingScreen />} />
       </Routes>
     </BrowserRouter>
   );

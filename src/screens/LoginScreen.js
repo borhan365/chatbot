@@ -35,7 +35,7 @@ function LoginScreen() {
     localStorage.setItem('userInfo', formData.password)
 
     // if local storage have a data then redirect to /devices page
-    if(formData.password) return navigate('/admin')
+    if(formData.password) return navigate('/')
   };
 
   return (

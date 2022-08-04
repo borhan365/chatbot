@@ -4,6 +4,7 @@ import { BsFacebook, BsLinkedin, BsTwitter, BsYoutube } from 'react-icons/bs'
 import Header from '../components/header/Header'
 import DashboardFullContent from '../components/dashboard/DashboardFullContent'
 import DashboardSidebar from '../components/dashboard/DashboardSidebar'
+import Footer from '../components/footer'
 
 function DashboardScreen() {
   return (
@@ -21,6 +22,7 @@ function DashboardScreen() {
             </div>
         </div>
       </section>
+      <Footer />
     </>
   )
 }
